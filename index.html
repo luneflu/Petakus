@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="description" content="PT Pesona Lintang Kemukus - Penyedia jasa sewa kendaraan kecil, besar, dan alat berat untuk korporasi serta proyek jalan tol. Terpercaya, armada modern, dukung penuh operasional Anda.">
+    <meta name="description"
+        content="PT Pesona Lintang Kemukus - Penyedia jasa sewa kendaraan kecil, besar, dan alat berat untuk korporasi serta proyek jalan tol. Terpercaya, armada modern, dukung penuh operasional Anda.">
     <meta name="author" content="PT Pesona Lintang Kemukus">
-    <meta name="keywords" content="sewa kendaraan korporasi, sewa alat berat, rental mobil corporate, alat berat proyek tol, rental truck, sewa excavator">
+    <meta name="keywords"
+        content="sewa kendaraan korporasi, sewa alat berat, rental mobil corporate, alat berat proyek tol, rental truck, sewa excavator">
     <meta property="og:site_name" content="PT Pesona Lintang Kemukus">
     <meta property="og:site" content="https://www.pesonalintangkemukus.com">
     <meta property="og:title" content="PT Pesona Lintang Kemukus - Sewa Kendaraan & Alat Berat Corporate">
-    <meta property="og:description" content="Layanan sewa kendaraan kecil hingga alat berat untuk korporasi dan proyek jalan tol. Solusi mobilitas terpercaya di Indonesia.">
+    <meta property="og:description"
+        content="Layanan sewa kendaraan kecil hingga alat berat untuk korporasi dan proyek jalan tol. Solusi mobilitas terpercaya di Indonesia.">
     <meta property="og:image" content="image/logo.png">
     <meta property="og:url" content="https://www.pesonalintangkemukus.com">
     <meta property="og:type" content="company">
@@ -18,7 +22,9 @@
     <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="icon" href="image/logo.png" type="image/png">
@@ -44,7 +50,13 @@
             max-width: 100vw;
         }
 
-        h1, h2, h3, h4, .navbar-brand, .btn, .section-title {
+        h1,
+        h2,
+        h3,
+        h4,
+        .navbar-brand,
+        .btn,
+        .section-title {
             font-family: 'Poppins', sans-serif;
         }
 
@@ -66,12 +78,15 @@
         .bg-primary-blue {
             background-color: var(--primary-blue) !important;
         }
+
         .bg-primary-dark {
             background-color: var(--primary-blue-dark) !important;
         }
+
         .text-blue {
             color: var(--primary-blue) !important;
         }
+
         .btn-primary-blue {
             background-color: var(--primary-blue);
             color: white;
@@ -81,12 +96,14 @@
             border-radius: 40px;
             transition: 0.3s;
         }
+
         .btn-primary-blue:hover {
             background-color: var(--primary-blue-dark);
             color: white;
             transform: translateY(-3px);
             box-shadow: 0 12px 20px -8px rgba(37, 99, 235, 0.3);
         }
+
         .btn-outline-blue {
             border: 2px solid var(--primary-blue);
             background: transparent;
@@ -96,14 +113,17 @@
             padding: 8px 24px;
             transition: 0.3s;
         }
+
         .btn-outline-blue:hover {
             background: var(--primary-blue);
             color: white;
             transform: translateY(-2px);
         }
+
         .text-primary-blue {
             color: var(--primary-blue) !important;
         }
+
         .alert {
             border-radius: 12px;
             margin-bottom: 20px;
@@ -161,6 +181,7 @@
                 transform: scale(1);
                 opacity: 0.8;
             }
+
             100% {
                 transform: scale(1.4);
                 opacity: 0;
@@ -206,8 +227,15 @@
         }
 
         @keyframes badge-pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
         }
 
         /* Responsive untuk WhatsApp Float */
@@ -216,11 +244,13 @@
                 bottom: 20px;
                 right: 20px;
             }
+
             .whatsapp-float .wa-button {
                 width: 56px;
                 height: 56px;
                 font-size: 28px;
             }
+
             .whatsapp-float .wa-tooltip {
                 font-size: 12px;
                 padding: 6px 14px;
@@ -232,6 +262,7 @@
                 bottom: 16px;
                 right: 16px;
             }
+
             .whatsapp-float .wa-button {
                 width: 52px;
                 height: 52px;
@@ -253,27 +284,40 @@
             z-index: 99999;
             transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
         }
+
         .loader-wrapper.fade-out {
             opacity: 0;
             visibility: hidden;
         }
+
         .loader-container {
             text-align: center;
             padding: 2rem;
         }
+
         .loader-logo {
             margin-bottom: 2rem;
             animation: pulse 1.5s ease-in-out infinite;
         }
+
         .loader-logo img {
             width: 100px;
             height: auto;
             filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.5));
         }
+
         @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
         }
+
         .loader-spinner {
             width: 60px;
             height: 60px;
@@ -284,10 +328,17 @@
             border-radius: 50%;
             animation: spin 0.8s linear infinite;
         }
+
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
+
         .progress-container {
             width: 280px;
             margin: 20px auto;
@@ -295,6 +346,7 @@
             border-radius: 10px;
             overflow: hidden;
         }
+
         .progress-bar {
             width: 0%;
             height: 4px;
@@ -302,6 +354,7 @@
             border-radius: 10px;
             transition: width 0.3s ease;
         }
+
         .loading-text {
             color: white;
             font-family: 'Poppins', sans-serif;
@@ -309,19 +362,37 @@
             margin-top: 20px;
             letter-spacing: 2px;
         }
+
         .loading-dots {
             display: inline-block;
         }
+
         .loading-dots span {
             animation: blink 1.4s infinite;
             animation-fill-mode: both;
         }
-        .loading-dots span:nth-child(2) { animation-delay: 0.2s; }
-        .loading-dots span:nth-child(3) { animation-delay: 0.4s; }
-        @keyframes blink {
-            0%, 80%, 100% { opacity: 0; }
-            40% { opacity: 1; }
+
+        .loading-dots span:nth-child(2) {
+            animation-delay: 0.2s;
         }
+
+        .loading-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes blink {
+
+            0%,
+            80%,
+            100% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 1;
+            }
+        }
+
         .percentage {
             color: #60a5fa;
             font-size: 1.5rem;
@@ -329,16 +400,19 @@
             margin-top: 10px;
             font-family: 'Poppins', monospace;
         }
+
         .loading-message {
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.9rem;
             margin-top: 15px;
             transition: opacity 0.3s ease;
         }
+
         .main-content {
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
         }
+
         .main-content.visible {
             opacity: 1;
         }
@@ -352,6 +426,7 @@
             width: 100% !important;
             transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out, padding 0.4s ease-in-out !important;
         }
+
         .navbar {
             background: transparent !important;
             backdrop-filter: none !important;
@@ -359,12 +434,14 @@
             transition: all 0.4s ease-in-out;
             padding: 20px 0;
         }
+
         .navbar.navbar-scrolled {
             background: rgba(10, 37, 64, 0.95) !important;
             backdrop-filter: blur(10px) !important;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
             padding: 12px 0;
         }
+
         .navbar-brand .brand-text {
             display: none;
             font-size: 1.1rem;
@@ -373,35 +450,43 @@
             word-break: break-word;
             color: white !important;
         }
+
         @media (min-width: 992px) {
             .navbar-brand .brand-text {
                 display: inline-block !important;
             }
+
             .navbar-brand {
                 gap: 0.5rem;
             }
         }
+
         .brand-logo-img {
             width: 45px;
             height: auto;
             transition: transform 0.3s ease;
         }
+
         .navbar-brand:hover .brand-logo-img {
             transform: scale(1.05);
         }
+
         .navbar .btn-primary-blue {
             background: transparent !important;
             border: 2px solid white !important;
             color: white !important;
         }
+
         .navbar.navbar-scrolled .btn-primary-blue {
             background: #2563eb !important;
             border: 2px solid #2563eb !important;
             color: white !important;
         }
+
         .navbar>.container {
             flex-wrap: nowrap;
         }
+
         .navbar .nav-link {
             color: #e2e8f0 !important;
             font-weight: 500;
@@ -409,12 +494,15 @@
             transition: color 0.3s ease;
             position: relative;
         }
+
         .navbar .nav-link:hover {
             color: white !important;
         }
+
         .navbar .nav-link.active {
             color: var(--accent-blue) !important;
         }
+
         .navbar .nav-link.active::after,
         .navbar .nav-link::after {
             content: '';
@@ -427,25 +515,33 @@
             border-radius: 2px;
             transition: width 0.35s ease, opacity 0.35s ease;
         }
+
         .navbar .nav-link::after {
             width: 0px;
             opacity: 0;
         }
+
         .navbar .nav-link.active::after {
             width: 30px;
             opacity: 1;
         }
+
         .navbar.navbar-scrolled .nav-link {
             color: white !important;
         }
+
         .navbar.navbar-scrolled .nav-link:hover {
             color: var(--accent-blue) !important;
         }
+
         .navbar.navbar-scrolled .nav-link.active {
             color: var(--accent-blue) !important;
         }
+
         @media (max-width: 991.98px) {
-            .navbar-collapse, .navbar-toggler {
+
+            .navbar-collapse,
+            .navbar-toggler {
                 display: none !important;
             }
         }
@@ -467,9 +563,11 @@
             flex-shrink: 0;
             z-index: 1001;
         }
+
         .mobile-menu-btn:hover {
             background: rgba(255, 255, 255, 0.2);
         }
+
         .mobile-menu-btn span {
             display: block;
             width: 22px;
@@ -479,21 +577,26 @@
             transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
             transform-origin: center;
         }
+
         .mobile-menu-btn.open span:nth-child(1) {
             transform: translateY(7px) rotate(45deg);
         }
+
         .mobile-menu-btn.open span:nth-child(2) {
             opacity: 0;
             transform: scaleX(0);
         }
+
         .mobile-menu-btn.open span:nth-child(3) {
             transform: translateY(-7px) rotate(-45deg);
         }
+
         @media (max-width: 991.98px) {
             .mobile-menu-btn {
                 display: flex;
             }
         }
+
         .mobile-nav-overlay {
             display: none;
             position: fixed;
@@ -504,21 +607,40 @@
             padding: 0;
             overflow: hidden;
         }
+
         .mobile-nav-overlay.open {
             display: flex;
             animation: overlayIn 0.35s cubic-bezier(0.23, 1, 0.32, 1) forwards;
         }
+
         .mobile-nav-overlay.closing {
             animation: overlayOut 0.28s cubic-bezier(0.23, 1, 0.32, 1) forwards;
         }
+
         @keyframes overlayIn {
-            from { opacity: 0; transform: translateY(-12px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         @keyframes overlayOut {
-            from { opacity: 1; transform: translateY(0); }
-            to { opacity: 0; transform: translateY(-12px); }
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
         }
+
         .mobile-nav-header {
             display: flex;
             align-items: center;
@@ -526,15 +648,18 @@
             padding: 20px 24px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
+
         .mobile-nav-header .brand-info {
             display: flex;
             align-items: center;
             gap: 12px;
         }
+
         .mobile-nav-header .brand-info img {
             width: 38px;
             height: auto;
         }
+
         .mobile-nav-header .brand-info span {
             color: white;
             font-family: 'Poppins', sans-serif;
@@ -542,6 +667,7 @@
             font-size: 0.9rem;
             line-height: 1.3;
         }
+
         .mobile-nav-close {
             width: 40px;
             height: 40px;
@@ -556,9 +682,11 @@
             font-size: 1.2rem;
             transition: 0.2s;
         }
+
         .mobile-nav-close:hover {
             background: rgba(255, 255, 255, 0.15);
         }
+
         .mobile-nav-links {
             flex: 1;
             display: flex;
@@ -567,6 +695,7 @@
             padding: 24px 32px;
             gap: 4px;
         }
+
         .mobile-nav-link {
             display: flex;
             align-items: center;
@@ -581,6 +710,7 @@
             transition: all 0.2s;
             border: 1px solid transparent;
         }
+
         .mobile-nav-link .nav-icon {
             width: 36px;
             height: 36px;
@@ -593,19 +723,23 @@
             flex-shrink: 0;
             transition: 0.2s;
         }
+
         .mobile-nav-link:hover {
             color: white !important;
             background: rgba(255, 255, 255, 0.07);
         }
+
         .mobile-nav-link.active {
             color: white !important;
             background: rgba(37, 99, 235, 0.25);
             border-color: rgba(96, 165, 250, 0.3);
         }
+
         .mobile-nav-link.active .nav-icon {
             background: var(--primary-blue);
             color: white;
         }
+
         .mobile-nav-link .nav-arrow {
             margin-left: auto;
             opacity: 0;
@@ -614,15 +748,18 @@
             font-size: 0.75rem;
             color: var(--accent-blue);
         }
+
         .mobile-nav-link.active .nav-arrow,
         .mobile-nav-link:hover .nav-arrow {
             opacity: 1;
             transform: translateX(0);
         }
+
         .mobile-nav-footer {
             padding: 20px 32px 32px;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
         }
+
         .mobile-nav-footer .btn-cta {
             display: flex;
             align-items: center;
@@ -640,16 +777,19 @@
             transition: 0.3s;
             box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
         }
+
         .mobile-nav-footer .btn-cta:hover {
             background: #1d4ed8;
             transform: translateY(-1px);
         }
+
         .mobile-nav-footer .social-row {
             display: flex;
             justify-content: center;
             gap: 16px;
             margin-top: 20px;
         }
+
         .mobile-nav-footer .social-row a {
             width: 38px;
             height: 38px;
@@ -663,27 +803,64 @@
             font-size: 1rem;
             transition: 0.2s;
         }
+
         .mobile-nav-footer .social-row a:hover {
             background: rgba(255, 255, 255, 0.15);
             color: white;
         }
+
         @keyframes linkSlide {
-            from { opacity: 0; transform: translateX(-16px); }
-            to { opacity: 1; transform: translateX(0); }
+            from {
+                opacity: 0;
+                transform: translateX(-16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
+
         .mobile-nav-overlay.open .mobile-nav-link {
             animation: linkSlide 0.4s cubic-bezier(0.23, 1, 0.32, 1) both;
         }
-        .mobile-nav-overlay.open .mobile-nav-link:nth-child(1) { animation-delay: 0.08s; }
-        .mobile-nav-overlay.open .mobile-nav-link:nth-child(2) { animation-delay: 0.13s; }
-        .mobile-nav-overlay.open .mobile-nav-link:nth-child(3) { animation-delay: 0.18s; }
-        .mobile-nav-overlay.open .mobile-nav-link:nth-child(4) { animation-delay: 0.23s; }
-        .mobile-nav-overlay.open .mobile-nav-link:nth-child(5) { animation-delay: 0.28s; }
-        .mobile-nav-overlay.open .mobile-nav-link:nth-child(6) { animation-delay: 0.33s; }
+
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(1) {
+            animation-delay: 0.08s;
+        }
+
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(2) {
+            animation-delay: 0.13s;
+        }
+
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(3) {
+            animation-delay: 0.18s;
+        }
+
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(4) {
+            animation-delay: 0.23s;
+        }
+
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(5) {
+            animation-delay: 0.28s;
+        }
+
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(6) {
+            animation-delay: 0.33s;
+        }
+
         @media (max-width: 768px) {
-            .hero-section h1 { font-size: 2rem; }
-            .visi-misi-card { padding: 1.5rem; }
-            .brand-logo-img { width: 40px; }
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .visi-misi-card {
+                padding: 1.5rem;
+            }
+
+            .brand-logo-img {
+                width: 40px;
+            }
         }
 
         /* ===== HERO SECTION ===== */
@@ -694,6 +871,7 @@
             align-items: center;
             overflow: hidden;
         }
+
         .hero-video-background {
             position: absolute;
             top: 0;
@@ -703,6 +881,7 @@
             object-fit: cover;
             z-index: 0;
         }
+
         .hero-section::before {
             content: "";
             position: absolute;
@@ -714,27 +893,33 @@
             pointer-events: none;
             z-index: 1;
         }
+
         .hero-section .container {
             position: relative;
             z-index: 2;
         }
+
         .hero-swiper {
             width: 100%;
             height: 100%;
             position: relative;
             z-index: 2;
         }
+
         .hero-slide {
             min-height: 100vh;
             display: flex;
             align-items: center;
         }
+
         .hero-slide .row {
             width: 100%;
         }
+
         .hero-caption {
             margin-top: 1rem;
         }
+
         .hero-caption h5 {
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -747,24 +932,36 @@
             border-left: 3px solid #60a5fa;
             font-size: 1.3rem;
         }
+
         .hero-logo-wrapper {
             animation: slideInFromRight 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
             display: inline-block;
             text-align: center;
         }
+
         .hero-logo-wrapper img {
             max-width: 380px;
             width: 100%;
             height: auto;
             filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2));
         }
+
         @keyframes slideInFromRight {
-            0% { opacity: 0; transform: translateX(80px); }
-            100% { opacity: 1; transform: translateX(0); }
+            0% {
+                opacity: 0;
+                transform: translateX(80px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
+
         .slide-content {
             animation: slideInFromRight 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
         }
+
         .slogan-text {
             font-size: 2.5rem;
             font-weight: 700;
@@ -772,11 +969,13 @@
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
             margin-bottom: 1.5rem;
         }
+
         .slogan-sub {
             font-size: 1.2rem;
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 2rem;
         }
+
         .hero-swiper-button-next,
         .hero-swiper-button-prev {
             position: absolute;
@@ -796,13 +995,21 @@
             transition: 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
+
         .hero-swiper-button-next:hover,
         .hero-swiper-button-prev:hover {
             background: var(--primary-blue);
             border-color: var(--primary-blue);
         }
-        .hero-swiper-button-next { right: 20px; }
-        .hero-swiper-button-prev { left: 20px; }
+
+        .hero-swiper-button-next {
+            right: 20px;
+        }
+
+        .hero-swiper-button-prev {
+            left: 20px;
+        }
+
         .hero-pagination {
             position: absolute;
             bottom: 30px;
@@ -813,6 +1020,7 @@
             gap: 12px;
             z-index: 20;
         }
+
         .hero-pagination .dot {
             width: 12px;
             height: 12px;
@@ -821,11 +1029,13 @@
             cursor: pointer;
             transition: 0.3s;
         }
+
         .hero-pagination .dot.active {
             background: var(--primary-blue);
             width: 30px;
             border-radius: 10px;
         }
+
         .sound-indicator {
             position: absolute;
             bottom: 30px;
@@ -853,6 +1063,7 @@
             font-weight: 700;
             color: var(--text-dark);
         }
+
         .section-title:after {
             content: '';
             position: absolute;
@@ -863,6 +1074,7 @@
             background: var(--primary-blue);
             border-radius: 4px;
         }
+
         .text-center .section-title:after {
             left: 50%;
             transform: translateX(-50%);
@@ -879,12 +1091,14 @@
         .bg-soft-blue {
             background-color: #eff6ff;
         }
+
         .visi-misi-card,
         .produk-item {
             background: #ffffff;
             border: 2px solid #cbd5e1;
             box-shadow: 0 2px 10px rgba(15, 23, 42, 0.07);
         }
+
         .visi-misi-card {
             background: white;
             border-radius: 28px;
@@ -892,10 +1106,12 @@
             height: 100%;
             transition: all 0.3s;
         }
+
         .visi-misi-card:hover {
             border-color: var(--primary-blue-light);
             box-shadow: 0 20px 30px -15px rgba(37, 99, 235, 0.15);
         }
+
         .produk-item {
             background: white;
             border-radius: 24px;
@@ -906,11 +1122,13 @@
             padding: 1.5rem;
             height: 100%;
         }
+
         .produk-item:hover {
             border-color: var(--primary-blue-light);
             transform: translateY(-6px);
             box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
         }
+
         .produk-icon {
             background: #eef2ff;
             width: 70px;
@@ -921,9 +1139,11 @@
             border-radius: 35px;
             margin: 0 auto 1rem;
         }
+
         .partner-swiper .swiper-wrapper {
             transition-timing-function: linear !important;
         }
+
         .partner-card {
             background: white;
             border-radius: 16px;
@@ -933,31 +1153,38 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             margin: 10px;
         }
+
         .partner-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
+
         .partner-card img {
             max-width: 100%;
             height: 80px;
             object-fit: contain;
             margin-bottom: 10px;
         }
+
         .partner-card p {
             margin-bottom: 0;
             font-weight: 500;
             color: #1e293b;
         }
+
         .support-section {
             background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
         }
+
         .support-item {
             padding: 10px 15px;
             transition: all 0.3s ease;
         }
+
         .support-item:hover {
             transform: translateY(-6px);
         }
+
         .icon-wrapper {
             width: 78px;
             height: 78px;
@@ -972,29 +1199,34 @@
             transition: all 0.3s ease;
             backdrop-filter: blur(6px);
         }
+
         .support-item:hover .icon-wrapper {
             background: linear-gradient(135deg, #0d6efd, #4dabf7);
             color: #fff;
             transform: scale(1.08);
             box-shadow: 0 15px 30px rgba(13, 110, 253, 0.25);
         }
+
         .support-item h4 {
             font-weight: 700;
             font-size: 18px;
             margin-bottom: 10px;
             color: #1f2937;
         }
+
         .support-item p {
             color: #6b7280;
             font-size: 14.5px;
             margin-bottom: 12px;
             line-height: 1.6;
         }
+
         .highlight {
             font-weight: 700;
             color: #0d6efd;
             font-size: 18px;
         }
+
         .badge-soft {
             display: inline-block;
             padding: 6px 14px;
@@ -1004,6 +1236,7 @@
             background: rgba(40, 167, 69, 0.10);
             color: #28a745;
         }
+
         .badge-soft.primary {
             background: rgba(13, 110, 253, 0.10);
             color: #0d6efd;
@@ -1017,6 +1250,7 @@
             justify-content: center;
             margin-bottom: 2.5rem;
         }
+
         .galeri-tab-btn {
             display: inline-flex;
             align-items: center;
@@ -1033,16 +1267,19 @@
             transition: all 0.25s ease;
             white-space: nowrap;
         }
+
         .galeri-tab-btn:hover {
             border-color: var(--primary-blue);
             color: var(--primary-blue);
         }
+
         .galeri-tab-btn.active {
             background: var(--primary-blue);
             border-color: var(--primary-blue);
             color: white;
             box-shadow: 0 6px 18px -4px rgba(37, 99, 235, 0.4);
         }
+
         .galeri-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -1050,16 +1287,19 @@
             margin: 0;
             padding: 0;
         }
+
         @media (max-width: 991px) {
             .galeri-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+
         @media (max-width: 575px) {
             .galeri-grid {
                 grid-template-columns: repeat(1, 1fr);
             }
         }
+
         .galeri-item {
             position: relative;
             border-radius: 0;
@@ -1069,9 +1309,11 @@
             background: #e2e8f0;
             display: none;
         }
+
         .galeri-item.visible {
             display: block;
         }
+
         .galeri-item img {
             width: 100%;
             height: 100%;
@@ -1079,9 +1321,11 @@
             transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
             display: block;
         }
+
         .galeri-item:hover img {
             transform: scale(1.07);
         }
+
         .galeri-item-overlay {
             position: absolute;
             inset: 0;
@@ -1093,9 +1337,11 @@
             justify-content: flex-end;
             padding: 1.2rem 1.4rem;
         }
+
         .galeri-item:hover .galeri-item-overlay {
             opacity: 1;
         }
+
         .galeri-item-overlay .item-title {
             color: white;
             font-family: 'Poppins', sans-serif;
@@ -1105,9 +1351,11 @@
             transform: translateY(6px);
             transition: transform 0.3s ease;
         }
+
         .galeri-item:hover .galeri-item-overlay .item-title {
             transform: translateY(0);
         }
+
         .galeri-item-overlay .item-desc {
             color: rgba(255, 255, 255, 0.8);
             font-size: 0.78rem;
@@ -1115,9 +1363,11 @@
             transform: translateY(6px);
             transition: transform 0.35s ease 0.04s;
         }
+
         .galeri-item:hover .galeri-item-overlay .item-desc {
             transform: translateY(0);
         }
+
         .galeri-item-overlay .item-badge {
             position: absolute;
             top: 14px;
@@ -1145,36 +1395,43 @@
             transition: opacity 0.3s ease;
             padding: 20px;
         }
+
         .galeri-lightbox.open {
             opacity: 1;
             pointer-events: all;
         }
+
         .lightbox-inner {
             position: relative;
             max-width: 900px;
             width: 100%;
             text-align: center;
         }
+
         .lightbox-inner img {
             width: 100%;
             max-height: 80vh;
             object-fit: contain;
             border-radius: 12px;
         }
+
         .lightbox-caption {
             color: white;
             margin-top: 16px;
         }
+
         .lightbox-caption h5 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
             margin-bottom: 4px;
         }
+
         .lightbox-caption p {
             color: rgba(255, 255, 255, 0.65);
             font-size: 0.9rem;
             margin: 0;
         }
+
         .lightbox-close {
             position: absolute;
             top: -18px;
@@ -1192,9 +1449,11 @@
             color: #0a2540;
             transition: 0.2s;
         }
+
         .lightbox-close:hover {
             background: #f1f5f9;
         }
+
         .lightbox-nav-btn {
             position: absolute;
             top: 50%;
@@ -1212,30 +1471,45 @@
             transition: 0.25s;
             font-size: 0.9rem;
         }
+
         .lightbox-nav-btn:hover {
             background: var(--primary-blue);
             border-color: var(--primary-blue);
         }
+
         .lightbox-prev {
             left: -64px;
         }
+
         .lightbox-next {
             right: -64px;
         }
+
         @media (max-width: 768px) {
-            .lightbox-prev { left: 0; }
-            .lightbox-next { right: 0; }
-            .lightbox-close { top: -14px; right: -6px; }
+            .lightbox-prev {
+                left: 0;
+            }
+
+            .lightbox-next {
+                right: 0;
+            }
+
+            .lightbox-close {
+                top: -14px;
+                right: -6px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- LOADER -->
     <div class="loader-wrapper" id="loaderWrapper">
         <div class="loader-container">
             <div class="loader-logo">
-                <img src="image/logo.png" alt="Logo" onerror="this.src='https://placehold.co/100x100/2563eb/white?text=PLK'">
+                <img src="image/logo.png" alt="Logo"
+                    onerror="this.src='https://placehold.co/100x100/2563eb/white?text=PLK'">
             </div>
             <div class="loader-spinner"></div>
             <div class="progress-container">
@@ -1258,10 +1532,8 @@
         <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
         <div class="whatsapp-float" id="waFloat">
             <div class="wa-tooltip">Hubungi kami via WhatsApp</div>
-            <a href="https://wa.me/6285156262804?text=Halo%20PT%20Pesona%20Lintang%20Kemukus%2C%20saya%20ingin%20menanyakan%20sewa%20kendaraan" 
-               class="wa-button" 
-               target="_blank"
-               aria-label="WhatsApp">
+            <a href="https://wa.me/6281331795070?text=Halo%20PT%20Pesona%20Lintang%20Kemukus%2C%20saya%20ingin%20menanyakan%20sewa%20kendaraan"
+                class="wa-button" target="_blank" aria-label="WhatsApp">
                 <span class="pulse-ring"></span>
                 <span class="pulse-ring"></span>
                 <i class="fab fa-whatsapp"></i>
@@ -1279,8 +1551,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#home" data-section="home">Beranda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#profil" data-section="profil">Profil Perusahaan</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#produk-layanan" data-section="produk-layanan">Produk & Layanan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#profil" data-section="profil">Profil
+                                Perusahaan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#produk-layanan"
+                                data-section="produk-layanan">Produk & Layanan</a></li>
                         <li class="nav-item"><a class="nav-link" href="#galeri" data-section="galeri">Galeri</a></li>
                         <li class="nav-item"><a class="nav-link" href="#mitra" data-section="mitra">Partner</a></li>
                         <li class="nav-item"><a class="nav-link" href="#support" data-section="support">Support</a></li>
@@ -1297,33 +1571,45 @@
         <div class="mobile-nav-overlay" id="mobileNavOverlay">
             <div class="mobile-nav-header">
                 <div class="brand-info">
-                    <img src="image/logo.png" alt="Logo" onerror="this.src='https://placehold.co/38x38/2563eb/white?text=PLK'">
+                    <img src="image/logo.png" alt="Logo"
+                        onerror="this.src='https://placehold.co/38x38/2563eb/white?text=PLK'">
                     <span>PESONA LINTANG<br>KEMUKUS</span>
                 </div>
                 <button class="mobile-nav-close" id="mobileNavClose"><i class="fas fa-times"></i></button>
             </div>
             <div class="mobile-nav-links">
-                <a href="#home" class="mobile-nav-link" data-section="home"><span class="nav-icon"><i class="fas fa-home"></i></span>Beranda<i class="fas fa-chevron-right nav-arrow"></i></a>
-                <a href="#profil" class="mobile-nav-link" data-section="profil"><span class="nav-icon"><i class="fas fa-building"></i></span>Profil Perusahaan<i class="fas fa-chevron-right nav-arrow"></i></a>
-                <a href="#produk-layanan" class="mobile-nav-link" data-section="produk-layanan"><span class="nav-icon"><i class="fas fa-truck"></i></span>Produk & Layanan<i class="fas fa-chevron-right nav-arrow"></i></a>
-                <a href="#galeri" class="mobile-nav-link" data-section="galeri"><span class="nav-icon"><i class="fas fa-images"></i></span>Galeri Armada<i class="fas fa-chevron-right nav-arrow"></i></a>
-                <a href="#mitra" class="mobile-nav-link" data-section="mitra"><span class="nav-icon"><i class="fas fa-handshake"></i></span>Partner & Support<i class="fas fa-chevron-right nav-arrow"></i></a>
-                <a href="#support" class="mobile-nav-link" data-section="support"><span class="nav-icon"><i class="fas fa-headset"></i></span>Support<i class="fas fa-chevron-right nav-arrow"></i></a>
+                <a href="#home" class="mobile-nav-link" data-section="home"><span class="nav-icon"><i
+                            class="fas fa-home"></i></span>Beranda<i class="fas fa-chevron-right nav-arrow"></i></a>
+                <a href="#profil" class="mobile-nav-link" data-section="profil"><span class="nav-icon"><i
+                            class="fas fa-building"></i></span>Profil Perusahaan<i
+                        class="fas fa-chevron-right nav-arrow"></i></a>
+                <a href="#produk-layanan" class="mobile-nav-link" data-section="produk-layanan"><span
+                        class="nav-icon"><i class="fas fa-truck"></i></span>Produk & Layanan<i
+                        class="fas fa-chevron-right nav-arrow"></i></a>
+                <a href="#galeri" class="mobile-nav-link" data-section="galeri"><span class="nav-icon"><i
+                            class="fas fa-images"></i></span>Galeri<i class="fas fa-chevron-right nav-arrow"></i></a>
+                <a href="#mitra" class="mobile-nav-link" data-section="mitra"><span class="nav-icon"><i
+                            class="fas fa-handshake"></i></span>Partner & Support<i
+                        class="fas fa-chevron-right nav-arrow"></i></a>
+                <a href="#support" class="mobile-nav-link" data-section="support"><span class="nav-icon"><i
+                            class="fas fa-headset"></i></span>Support<i class="fas fa-chevron-right nav-arrow"></i></a>
             </div>
             <div class="mobile-nav-footer">
-                <a href="#kontak" class="btn-cta" id="mobileCta"><i class="fab fa-whatsapp"></i> Hubungi Kami</a>
+                <a href="https://wa.me/6285156262804?text=Halo%20PT%20Pesona%20Lintang%20Kemukus%2C%20saya%20ingin%20menanyakan%20sewa%20kendaraan"
+                    class="btn-cta" id="mobileCta"><i class="fab fa-whatsapp"></i> Hubungi Kami</a>
                 <div class="social-row">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/pesonalintangkemukus/" class="text-primary-blue me-3 fs-5"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/pt-pesona-lintang-kemukus-197165270/"
+                        class="text-primary-blue me-3 fs-5"><i class="fab fa-linkedin-in"></i></a>
+
                 </div>
             </div>
         </div>
 
         <!-- HERO SECTION -->
         <section id="home" class="hero-section">
-            <video class="hero-video-background" autoplay loop playsinline id="heroVideo">
+            <video class="hero-video-background" autoplay loop playsinline muted id="heroVideo">
                 <source src="video/bg2.mp4" type="video/mp4">
             </video>
             <div class="sound-indicator" id="soundIndicator">
@@ -1337,8 +1623,12 @@
                             <div class="container py-5 my-4">
                                 <div class="row align-items-center min-vh-75">
                                     <div class="col-lg-7 text-white mb-5 mb-lg-0" data-aos="fade-up">
-                                        <h1 class="display-4 fw-bold mb-4 slide-content">Your Best <span style="color: #60a5fa;">Rent Car</span> Services</h1>
-                                        <p class="lead mb-4 opacity-90 slide-content" style="animation-delay: 0.1s;">PT Pesona Lintang Kemukus (PETAKUS) merupakan perusahaan yang bergerak di bidang penyedia jasa sewa kendaraan besar maupun kecil yang dikhususkan untuk corporate.</p>
+                                        <h1 class="display-4 fw-bold mb-4 slide-content">Your Best <span
+                                                style="color: #60a5fa;">Rent Car</span> Services</h1>
+                                        <p class="lead mb-4 opacity-90 slide-content" style="animation-delay: 0.1s;">PT
+                                            Pesona Lintang Kemukus (PETAKUS) merupakan perusahaan yang bergerak di
+                                            bidang penyedia jasa sewa kendaraan besar maupun kecil yang dikhususkan
+                                            untuk corporate.</p>
                                     </div>
                                     <div class="col-lg-5 text-center">
                                         <div class="hero-logo-wrapper">
@@ -1358,7 +1648,8 @@
                                 <div class="row align-items-center min-vh-75 justify-content-center text-center">
                                     <div class="col-lg-8 text-white">
                                         <div class="hero-logo-wrapper mb-4">
-                                            <img src="image/logo.png" alt="PT Pesona Lintang Kemukus" style="max-width: 200px;">
+                                            <img src="image/logo.png" alt="PT Pesona Lintang Kemukus"
+                                                style="max-width: 200px;">
                                         </div>
                                         <div class="slide-content">
                                             <h1 class="slogan-text">"DRIVING YOUR BUSINESS FORWARD, TOGETHER"</h1>
@@ -1387,15 +1678,23 @@
                 <div class="row g-5 align-items-center mb-5">
                     <div class="col-lg-6" data-aos="fade-right">
                         <h2 class="section-title mt-3 fs-1">PT Pesona Lintang Kemukus</h2>
-                        <p class="mt-3 fs-5 text-secondary">PT Pesona Lintang Kemukus hadir sebagai mitra terpercaya yang profesional dalam menyediakan kendaraan operasional yang dikhususkan untuk kebutuhan perusahaan dengan standar layanan terbaik di seluruh wilayah Indonesia. Kami berkomitmen untuk mendukung efisiensi operasional perusahaan Anda melalui penyediaan armada yang prima, sistem manajemen transportasi yang terintegrasi, serta dukungan layanan yang terbaik.</p>
+                        <p class="mt-3 fs-5 text-secondary">PT Pesona Lintang Kemukus hadir sebagai mitra terpercaya
+                            yang profesional dalam menyediakan kendaraan operasional yang dikhususkan untuk perusahaan,
+                            dengan standar layanan terbaik di seluruh wilayah Indonesia. Kami berkomitmen untuk
+                            mendukung efisiensi operasional perusahaan Anda melalui penyediaan armada yang prima, sistem
+                            manajemen transportasi yang terintegrasi, serta dukungan layanan yang terbaik.</p>
                         <div class="row mt-4">
-                            <div class="col-md-6 mb-3"><i class="fas fa-check-circle text-primary-blue me-2"></i> 500+ Unit Kendaraan & Alat Berat</div>
-                            <div class="col-md-6 mb-3"><i class="fas fa-check-circle text-primary-blue me-2"></i> 100+ Mitra Corporate Aktif</div>
-                            <div class="col-md-6 mb-3"><i class="fas fa-check-circle text-primary-blue me-2"></i> 24/7 Emergency Support</div>
-                            <div class="col-md-6 mb-3"><i class="fas fa-check-circle text-primary-blue me-2"></i> ISO & K3 Bersertifikat</div>
+                            <div class="col-md-6 mb-3"><i class="fas fa-check-circle text-primary-blue me-2"></i> 500+
+                                Unit Kendaraan & Alat Berat</div>
+                            <div class="col-md-6 mb-3"><i class="fas fa-check-circle text-primary-blue me-2"></i> 100+
+                                Mitra Corporate Aktif</div>
+                            <div class="col-md-6 mb-3"><i class="fas fa-check-circle text-primary-blue me-2"></i> 24/7
+                                Emergency Support</div>
+                            <div class="col-md-6 mb-3"><i class="fas fa-check-circle text-primary-blue me-2"></i> ISO &
+                                K3 Bersertifikat</div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="text-center mb-4">
                     <h2 class="section-title">Visi & Misi</h2>
@@ -1414,10 +1713,14 @@
                             <i class="fas fa-bullseye fa-3x text-primary-blue mb-3"></i>
                             <h3 class="fw-bold">Misi</h3>
                             <ul class="list-unstyled mt-2">
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary-blue me-2"></i> Membangun kerjasama dengan pihak terkait</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary-blue me-2"></i> Menyediakan fasilitas terbaik</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary-blue me-2"></i> Menyediakan Kendaraan terbaik</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary-blue me-2"></i> Memberikan pelayanan prima</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary-blue me-2"></i> Membangun
+                                    kerjasama dengan pihak terkait</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary-blue me-2"></i> Menyediakan
+                                    fasilitas terbaik</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary-blue me-2"></i> Menyediakan
+                                    Kendaraan terbaik</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary-blue me-2"></i> Memberikan
+                                    pelayanan prima</li>
                             </ul>
                         </div>
                     </div>
@@ -1435,7 +1738,8 @@
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-3">
                         <div class="produk-item">
-                            <div class="produk-icon mx-auto"><i class="fas fa-charging-station fa-3x text-primary-blue"></i></div>
+                            <div class="produk-icon mx-auto"><i
+                                    class="fas fa-charging-station fa-3x text-primary-blue"></i></div>
                             <h5 class="fw-bold">Mobil Listrik</h5>
                             <p class="text-muted">Ramah lingkungan, efisien, teknologi modern</p>
                         </div>
@@ -1456,14 +1760,16 @@
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <div class="produk-item">
-                            <div class="produk-icon mx-auto"><i class="fas fa-hard-hat fa-3x text-primary-blue"></i></div>
+                            <div class="produk-icon mx-auto"><i class="fas fa-hard-hat fa-3x text-primary-blue"></i>
+                            </div>
                             <h5 class="fw-bold">Alat Berat</h5>
                             <p class="text-muted">Excavator, bulldozer, crane untuk proyek tol</p>
                         </div>
                     </div>
                 </div>
                 <div class="text-center mt-5">
-                    <a href="#kontak" class="btn btn-primary-blue">Konsultasi Kebutuhan <i class="fas fa-arrow-right ms-2"></i></a>
+                    <a href="#kontak" class="btn btn-primary-blue">Konsultasi Kebutuhan <i
+                            class="fas fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
         </section>
@@ -1476,39 +1782,180 @@
                     <p class="text-muted mt-3">Koleksi kendaraan unggulan kami</p>
                 </div>
                 <div class="galeri-tabs" data-aos="fade-up" data-aos-delay="80">
-                    <button class="galeri-tab-btn active" data-filter="tol"><i class="fas fa-road"></i> Kendaraan Layanan Jalan Tol</button>
-                    <button class="galeri-tab-btn " data-filter="ev"><i class="fas fa-charging-station"></i> Mobil Listrik</button>
-                    <button class="galeri-tab-btn" data-filter="kecil"><i class="fas fa-car"></i> Kendaraan Kecil</button>
-                    <button class="galeri-tab-btn" data-filter="besar"><i class="fas fa-truck"></i> Kendaraan Besar</button>
-        
+                    <button class="galeri-tab-btn active" data-filter="tol"><i class="fas fa-road"></i> Kendaraan
+                        Layanan Jalan Tol</button>
+                    <button class="galeri-tab-btn " data-filter="ev"><i class="fas fa-charging-station"></i> Mobil
+                        Listrik</button>
+                    <button class="galeri-tab-btn" data-filter="kecil"><i class="fas fa-car"></i> Kendaraan
+                        Kecil</button>
+                    <button class="galeri-tab-btn" data-filter="besar"><i class="fas fa-truck"></i> Kendaraan
+                        Besar</button>
+
                 </div>
                 <div class="galeri-grid" data-aos="fade-up" data-aos-delay="150">
                     <!-- Mobil Listrik -->
-                    <div class="galeri-item" data-category="ev" data-title="Hyundai Ioniq 5" data-desc="SUV listrik premium, jarak tempuh 450km"><img src="image/ioniq5.jpg" alt="Hyundai Ioniq 5"><div class="galeri-item-overlay"><span class="item-badge">EV</span><p class="item-title">Hyundai Ioniq 5</p><p class="item-desc">SUV listrik premium</p></div></div>
-                    <div class="galeri-item" data-category="ev" data-title="BYD Atto 3" data-desc="Desain futuristik, baterai blade technology"><img src="image/atto3.jpg" alt="BYD Atto 3"><div class="galeri-item-overlay"><span class="item-badge">EV</span><p class="item-title">BYD Atto 3</p><p class="item-desc">Desain futuristik</p></div></div>
-                    <div class="galeri-item" data-category="ev" data-title="BYD Atto 3" data-desc="Desain futuristik, baterai blade technology"><img src="image/ev 1.jpeg" alt="BYD Atto 3"><div class="galeri-item-overlay"><span class="item-badge">EV</span><p class="item-title">BYD Atto 3</p><p class="item-desc">Desain futuristik</p></div></div>
+                    <div class="galeri-item" data-category="ev" data-title="Hyundai Ioniq 5"
+                        data-desc="SUV listrik premium, jarak tempuh 450km"><img src="image/ioniq5.jpg"
+                            alt="Hyundai Ioniq 5">
+                        <div class="galeri-item-overlay"><span class="item-badge">EV</span>
+                            <p class="item-title">Hyundai Ioniq 5</p>
+                            <p class="item-desc">SUV listrik premium</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="ev" data-title="BYD Atto 3"
+                        data-desc="Desain futuristik, baterai blade technology"><img src="image/atto3.jpg"
+                            alt="BYD Atto 3">
+                        <div class="galeri-item-overlay"><span class="item-badge">EV</span>
+                            <p class="item-title">BYD Atto 3</p>
+                            <p class="item-desc">Desain futuristik</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="ev" data-title="DFSK Gelora"
+                        data-desc="Desain futuristik, baterai blade technology"><img src="image/ev 1.jpeg"
+                            alt="DFSK Gelora">
+                        <div class="galeri-item-overlay"><span class="item-badge">EV</span>
+                            <p class="item-title">DFSK Gelora</p>
+                            <p class="item-desc">Desain futuristik</p>
+                        </div>
+                    </div>
                     <!-- Kendaraan Kecil -->
-                    <div class="galeri-item" data-category="kecil" data-title="Toyota Camry" data-desc="Sedan eksekutif kenyamanan tinggi"><img src="image/kecil 1.jpeg" alt="Toyota Camry"><div class="galeri-item-overlay"><span class="item-badge">Sedan</span><p class="item-title">Toyota Camry</p><p class="item-desc">Sedan eksekutif</p></div></div>
-                    <div class="galeri-item" data-category="kecil" data-title="Honda CR-V" data-desc="SUV premium untuk perjalanan dinas"><img src="image/kecil 2.jpeg" alt="Honda CR-V"><div class="galeri-item-overlay"><span class="item-badge">SUV</span><p class="item-title">Honda CR-V</p><p class="item-desc">SUV premium</p></div></div>
-                    <div class="galeri-item" data-category="kecil" data-title="Mitsubishi Xpander" data-desc="MPV andalan keluarga dan operasional"><img src="image/kecil 3.jpeg" alt="Mitsubishi Xpander"><div class="galeri-item-overlay"><span class="item-badge">MPV</span><p class="item-title">Mitsubishi Xpander</p><p class="item-desc">MPV operasional</p></div></div>
-                    <div class="galeri-item" data-category="kecil" data-title="Toyota Camry" data-desc="Sedan eksekutif kenyamanan tinggi"><img src="image/kecil 4.jpeg" alt="Toyota Camry"><div class="galeri-item-overlay"><span class="item-badge">Sedan</span><p class="item-title">Toyota Camry</p><p class="item-desc">Sedan eksekutif</p></div></div>
-                    <div class="galeri-item" data-category="kecil" data-title="Honda CR-V" data-desc="SUV premium untuk perjalanan dinas"><img src="image/kecil 5.jpeg" alt="Honda CR-V"><div class="galeri-item-overlay"><span class="item-badge">SUV</span><p class="item-title">Honda CR-V</p><p class="item-desc">SUV premium</p></div></div>
-                    <div class="galeri-item" data-category="kecil" data-title="Mitsubishi Xpander" data-desc="MPV andalan keluarga dan operasional"><img src="image/kecil 6.jpeg" alt="Mitsubishi Xpander"><div class="galeri-item-overlay"><span class="item-badge">MPV</span><p class="item-title">Mitsubishi Xpander</p><p class="item-desc">MPV operasional</p></div></div>
+                    <div class="galeri-item" data-category="kecil" data-title="Toyota Hilux Rangga"
+                        data-desc="Shuttle Pickup"><img src="image/kecil 1.jpeg" alt="Toyota Hilux Rangga">
+                        <div class="galeri-item-overlay"><span class="item-badge">MPV</span>
+                            <p class="item-title">Toyota Hilux Rangga</p>
+                            <p class="item-desc">Shuttle Pickup</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="kecil" data-title="Toyota Hilux Double Cabin"
+                        data-desc="Mobil Customer Service"><img src="image/kecil 2.jpeg"
+                            alt="Toyota Hilux Double Cabin">
+                        <div class="galeri-item-overlay"><span class="item-badge">SUV</span>
+                            <p class="item-title">Toyota Hilux Double Cabin</p>
+                            <p class="item-desc">Mobil Customer Service</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="kecil" data-title="Toyota New Vios"
+                        data-desc="Patroli Jalan Raya"><img src="image/kecil 3.jpeg" alt="Toyota New Vios">
+                        <div class="galeri-item-overlay"><span class="item-badge">MPV</span>
+                            <p class="item-title">Toyota New Vios</p>
+                            <p class="item-desc">Patroli Jalan Raya</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="kecil" data-title="Daihatsu New Xenia"
+                        data-desc="Kendaraan Operasional"><img src="image/kecil 4.jpeg" alt="Daihatsu New Xenia">
+                        <div class="galeri-item-overlay"><span class="item-badge">Sedan</span>
+                            <p class="item-title">Daihatsu New Xenia</p>
+                            <p class="item-desc">Kendaraan Operasional</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="kecil" data-title="Toyota New Innova Reborn"
+                        data-desc="Kendaraan Operasional Manager"><img src="image/kecil 5.jpeg"
+                            alt="Toyota New Innova Reborn">
+                        <div class="galeri-item-overlay"><span class="item-badge">SUV</span>
+                            <p class="item-title">Toyota New Innova Reborn</p>
+                            <p class="item-desc">Kendaraan Operasional Manager</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="kecil" data-title="Toyota New Corolla Altis"
+                        data-desc="Patroli Jalan Raya"><img src="image/kecil 6.jpeg" alt="Toyota New Corolla Altis">
+                        <div class="galeri-item-overlay"><span class="item-badge">MPV</span>
+                            <p class="item-title">Mitsubishi Xpander</p>
+                            <p class="item-desc">Patroli Jalan Raya</p>
+                        </div>
+                    </div>
                     <!-- Kendaraan Besar -->
-                    <div class="galeri-item" data-category="besar" data-title="Bus Pariwisata" data-desc="Kapasitas 40 penumpang, AC, TV"><img src="image/mbl 6.jpeg" alt="Bus Pariwisata"><div class="galeri-item-overlay"><span class="item-badge">Bus</span><p class="item-title">Bus Pariwisata</p><p class="item-desc">Kapasitas 40 penumpang</p></div></div>
-                    <div class="galeri-item" data-category="besar" data-title="Truck Fuso" data-desc="Truk box 10 ton untuk logistik"><img src="image/besar 1.jpeg" alt="Truck Fuso"><div class="galeri-item-overlay"><span class="item-badge">Truck</span><p class="item-title">Truck Tangki Air</p><p class="item-desc">Truk Tangki Air</p></div></div>
-                    <div class="galeri-item" data-category="besar" data-title="Tronton Wingbox" data-desc="Kapasitas besar untuk distribusi"><img src="image/besar 2.jpeg" alt="Tronton Wingbox"><div class="galeri-item-overlay"><span class="item-badge">Heavy Truck</span><p class="item-title">Tronton Wingbox</p><p class="item-desc">Kapasitas besar</p></div></div>
+                    <div class="galeri-item" data-category="besar" data-title="Truk Derek 35 Ton"
+                        data-desc="Evakuasi Kendaraan Muatan Besar"><img src="image/mbl 6.jpeg"
+                            alt="Evakuasi Mobil Kecil">
+                        <div class="galeri-item-overlay"><span class="item-badge">Truck</span>
+                            <p class="item-title">Truk Derek 35 Ton</p>
+                            <p class="item-desc">Evakuasi Kendaraan Muatan Besar</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="besar" data-title="Truk Tangki Air 5000L"
+                        data-desc="Penyiraman/Perawatan Jalan Tol"><img src="image/besar 1.jpeg"
+                            alt="Truk Tangki Air 5000L">
+                        <div class="galeri-item-overlay"><span class="item-badge">Truck</span>
+                            <p class="item-title">Truk Tangki Air 5000L</p>
+                            <p class="item-desc">Penyiraman/Perawatan Jalan Tol</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="besar" data-title="Truk Towing 10 Ton"
+                        data-desc="Evakuasi Mobil Kecil"><img src="image/besar 2.jpeg" alt="Truk Towing 10 Ton">
+                        <div class="galeri-item-overlay"><span class="item-badge">Truk Towing 10 Ton</span>
+                            <p class="item-title">Tronton Wingbox</p>
+                            <p class="item-desc">Evakuasi Mobil Kecil</p>
+                        </div>
+                    </div>
                     <!-- Alat Berat -->
-                    <div class="galeri-item" data-category="alat" data-title="Excavator Komatsu" data-desc="Alat gali untuk proyek jalan tol"><img src="https://placehold.co/600x450/d97706/white?text=Excavator" alt="Excavator"><div class="galeri-item-overlay"><span class="item-badge">Excavator</span><p class="item-title">Excavator Komatsu</p><p class="item-desc">Alat gali proyek tol</p></div></div>
-                    <div class="galeri-item" data-category="alat" data-title="Bulldozer Caterpillar" data-desc="Perataan lahan dan pembangunan"><img src="https://placehold.co/600x450/b45309/white?text=Bulldozer" alt="Bulldozer"><div class="galeri-item-overlay"><span class="item-badge">Bulldozer</span><p class="item-title">Bulldozer Caterpillar</p><p class="item-desc">Perataan lahan</p></div></div>
-                    <div class="galeri-item" data-category="alat" data-title="Crane 50 Ton" data-desc="Angkat material konstruksi"><img src="https://placehold.co/600x450/92400e/white?text=Crane" alt="Crane"><div class="galeri-item-overlay"><span class="item-badge">Crane</span><p class="item-title">Crane 50 Ton</p><p class="item-desc">Angkat material</p></div></div>
+                    <div class="galeri-item" data-category="alat" data-title="Excavator Komatsu"
+                        data-desc="Alat gali untuk proyek jalan tol"><img
+                            src="https://placehold.co/600x450/d97706/white?text=Excavator" alt="Excavator">
+                        <div class="galeri-item-overlay"><span class="item-badge">Excavator</span>
+                            <p class="item-title">Excavator Komatsu</p>
+                            <p class="item-desc">Alat gali proyek tol</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="alat" data-title="Bulldozer Caterpillar"
+                        data-desc="Perataan lahan dan pembangunan"><img
+                            src="https://placehold.co/600x450/b45309/white?text=Bulldozer" alt="Bulldozer">
+                        <div class="galeri-item-overlay"><span class="item-badge">Bulldozer</span>
+                            <p class="item-title">Bulldozer Caterpillar</p>
+                            <p class="item-desc">Perataan lahan</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="alat" data-title="Crane 50 Ton"
+                        data-desc="Angkat material konstruksi"><img
+                            src="https://placehold.co/600x450/92400e/white?text=Crane" alt="Crane">
+                        <div class="galeri-item-overlay"><span class="item-badge">Crane</span>
+                            <p class="item-title">Crane 50 Ton</p>
+                            <p class="item-desc">Angkat material</p>
+                        </div>
+                    </div>
                     <!-- Kendaraan Jalan Tol -->
-                    <div class="galeri-item" data-category="tol" data-title="Pickup Operasional Tol" data-desc="Untuk patroli & pemeliharaan jalan tol"><img src="image/mbl 1.jpeg" alt="Pickup Tol"><div class="galeri-item-overlay"><span class="item-badge">Tol</span><p class="item-title">Pickup Operasional Tol</p><p class="item-desc">Patroli & pemeliharaan</p></div></div>
-                    <div class="galeri-item" data-category="tol" data-title="Truk Derek Tol" data-desc="Siaga 24 jam untuk evakuasi kendaraan"><img src="image/mbl 6.jpeg" alt="Truk Derek"><div class="galeri-item-overlay"><span class="item-badge">Tol</span><p class="item-title">Truk Derek Tol</p><p class="item-desc">Evakuasi kendaraan</p></div></div>
-                    <div class="galeri-item" data-category="tol" data-title="Bus Shuttle Tol" data-desc="Mobilitas pekerja proyek jalan tol"><img src="image/mbl 3.png" alt="Bus Shuttle"><div class="galeri-item-overlay"><span class="item-badge">Tol</span><p class="item-title">Bus Shuttle Tol</p><p class="item-desc">Mobilitas pekerja tol</p></div></div>
-                    <div class="galeri-item" data-category="tol" data-title="Operasional Tol" data-desc="Untuk patroli & pemeliharaan jalan tol"><img src="image/mbl 4.jpeg" alt="Pickup Tol"><div class="galeri-item-overlay"><span class="item-badge">Tol</span><p class="item-title">Mobil Operasional Tol</p><p class="item-desc">Patroli & pemeliharaan</p></div></div>
-                    <div class="galeri-item" data-category="tol" data-title="Truk Derek Tol" data-desc="Siaga 24 jam untuk evakuasi kendaraan"><img src="image/mbl 5.jpeg" alt="Truk Derek"><div class="galeri-item-overlay"><span class="item-badge">Tol</span><p class="item-title">Truk Derek Tol</p><p class="item-desc">Evakuasi kendaraan</p></div></div>
-                    <div class="galeri-item" data-category="tol" data-title="Bus Shuttle Tol" data-desc="Mobilitas pekerja proyek jalan tol"><img src="image/mbl 7.jpeg" alt="Bus Shuttle"><div class="galeri-item-overlay"><span class="item-badge">Tol</span><p class="item-title">Bus Shuttle Tol</p><p class="item-desc">Mobilitas pekerja tol</p></div></div>
+                    <div class="galeri-item" data-category="tol" data-title="Kendaraan Operasional Jalan Tol"
+                        data-desc="Mobile Customer Service"><img src="image/mbl 1.jpeg"
+                            alt="Kendaraan Operasional Jalan Tol">
+                        <div class="galeri-item-overlay"><span class="item-badge">Tol</span>
+                            <p class="item-title">Kendaraan Operasional Jalan Tol</p>
+                            <p class="item-desc">Mobile Customer Service</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="tol" data-title="Kendaraan Layanan Jalan Tol"
+                        data-desc="Truk Derek 35 Ton"><img src="image/mbl 6.jpeg" alt="Kendaraan Layanan Jalan Tol">
+                        <div class="galeri-item-overlay"><span class="item-badge">Tol</span>
+                            <p class="item-title">Kendaraan Layanan Jalan Tol</p>
+                            <p class="item-desc">Truk Derek 35 Ton</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="tol" data-title="Kendaraan Layanan Jalan Tol"
+                        data-desc="Ambulance, Kamtib, MCS"><img src="image/mbl 3.png" alt="Ambulance">
+                        <div class="galeri-item-overlay"><span class="item-badge">Tol</span>
+                            <p class="item-title">Kendaraan Layanan Jalan Tol</p>
+                            <p class="item-desc">Ambulance, Kamtib, MCS</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="tol" data-title="Kendaraan Layanan Jalan Tol"
+                        data-desc="Keamanan dan Ketertiban"><img src="image/mbl 4.jpeg" alt="Sedan">
+                        <div class="galeri-item-overlay"><span class="item-badge">Tol</span>
+                            <p class="item-title">Kendaraan Layanan Jalan Tol</p>
+                            <p class="item-desc">Keamanan dan Ketertiban</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="tol" data-title="Kendaraan Layanan Jalan Tol"
+                        data-desc="Truk Derek 25 Ton"><img src="image/mbl 5.jpeg" alt="Truk Derek">
+                        <div class="galeri-item-overlay"><span class="item-badge">Tol</span>
+                            <p class="item-title">Kendaraan Layanan Jalan Tol</p>
+                            <p class="item-desc">Truk Derek 25 Ton</p>
+                        </div>
+                    </div>
+                    <div class="galeri-item" data-category="tol" data-title="Hiace" data-desc="Shuttle Bus"><img
+                            src="image/mbl 7.jpeg" alt="Bus Shuttle">
+                        <div class="galeri-item-overlay"><span class="item-badge">Tol</span>
+                            <p class="item-title">Bus Shuttle Tol</p>
+                            <p class="item-desc">Shuttle Bus</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1522,17 +1969,29 @@
                 </div>
                 <div class="swiper partner-swiper" data-aos="fade-up">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><div><img src="image/jsmg.png" alt="Kementerian PUPR" class="img-fluid mb-2"></div></div>
-                        <div class="swiper-slide"><div><img src="image/JNK.png" alt="PT Wijaya Karya" class="img-fluid mb-2"></div></div>
-                        <div class="swiper-slide"><div><img src="image/ctp.png" alt="Sinarmas Logistik" class="img-fluid mb-2"></div></div>
-                        <div class="swiper-slide"><div><img src="image/jsmg manado.png" alt="Kementerian PUPR" class="img-fluid mb-2"></div></div>
-                        <div class="swiper-slide"><div><img src="image/jsmg pasuruan.png" alt="PT Wijaya Karya" class="img-fluid mb-2"></div></div>
-                        <div class="swiper-slide"><div><img src="image/pelindo.png" alt="Pelindo" class="img-fluid mb-2"></div></div>
+                        <div class="swiper-slide">
+                            <div><img src="image/jsmg.png" alt="Kementerian PUPR" class="img-fluid mb-2"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div><img src="image/JNK.png" alt="PT Wijaya Karya" class="img-fluid mb-2"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div><img src="image/ctp.png" alt="Sinarmas Logistik" class="img-fluid mb-2"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div><img src="image/jsmg manado.png" alt="Kementerian PUPR" class="img-fluid mb-2"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div><img src="image/jsmg pasuruan.png" alt="PT Wijaya Karya" class="img-fluid mb-2"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div><img src="image/pelindo.png" alt="Pelindo" class="img-fluid mb-2"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-                <!-- OUR PARTNER SECTION (Baru) -->
+        <!-- OUR PARTNER SECTION (Baru) -->
         <section id="our-partner" class="py-5 bg-white">
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
@@ -1542,52 +2001,52 @@
                 <div class="swiper ourpartner-swiper" data-aos="fade-up">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div >
+                            <div>
                                 <img src="image/1.png" alt="Partner 1" class="img-fluid mb-2">
-                               
+
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div >
+                            <div>
                                 <img src="image/Logo_Asuransi_Sinarmas.png" alt="Partner 2" class="img-fluid mb-2">
-                                
+
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div >
+                            <div>
                                 <img src="image/Mag.png" alt="Partner 3" class="img-fluid mb-2">
-                                
+
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div >
+                            <div>
                                 <img src="image/ramayana.png" alt="Partner 4" class="img-fluid mb-2">
-                                
+
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div>
                                 <img src="image/2.png" alt="Partner 5" class="img-fluid mb-2">
-                                
+
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div >
+                            <div>
                                 <img src="image/3.png" alt="Partner 6" class="img-fluid mb-2">
-                                
+
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div >
+                            <div>
                                 <img src="image/4.png" alt="Partner 7" class="img-fluid mb-2">
-                               
+
                             </div>
                         </div>
                         <!-- Tambahan partner jika diperlukan -->
-                        
-                
+
+
+                    </div>
                 </div>
-            </div>
         </section>
         <!-- SUPPORT -->
         <section id="support" class="support-section py-6">
@@ -1597,9 +2056,30 @@
                     <p class="text-muted">Kami siap membantu kapanpun Anda membutuhkan</p>
                 </div>
                 <div class="row g-5 text-center">
-                    <div class="col-lg-4" data-aos="fade-up"><div class="support-item"><div class="icon-wrapper"><i class="fas fa-headset"></i></div><h4>Call Center 24 Jam</h4><p>Layanan darurat dan bantuan teknis tersedia setiap saat.</p><div class="highlight">1500-789</div></div></div>
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100"><div class="support-item"><div class="icon-wrapper"><i class="fas fa-tools"></i></div><h4>Tim Teknis Siaga</h4><p>Teknisi berpengalaman siap turun ke lapangan untuk perawatan dan perbaikan.</p><span class="badge-soft">Response < 2 Jam</span></div></div>
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200"><div class="support-item"><div class="icon-wrapper"><i class="fas fa-exchange-alt"></i></div><h4>Penggantian Unit Cepat</h4><p>Jika terjadi kendala, kami siap mengganti unit dengan armada pengganti.</p><span class="badge-soft primary">Garansi 24 Jam</span></div></div>
+                    <div class="col-lg-4" data-aos="fade-up">
+                        <div class="support-item">
+                            <div class="icon-wrapper"><i class="fas fa-headset"></i></div>
+                            <h4>Call Center 24 Jam</h4>
+                            <p>Layanan darurat dan bantuan teknis tersedia setiap saat.</p>
+                            <div class="highlight">1500-789</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="support-item">
+                            <div class="icon-wrapper"><i class="fas fa-tools"></i></div>
+                            <h4>Tim Teknis Siaga</h4>
+                            <p>Teknisi berpengalaman siap turun ke lapangan untuk perawatan dan perbaikan.</p><span
+                                class="badge-soft">Response < 2 Jam</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="support-item">
+                            <div class="icon-wrapper"><i class="fas fa-exchange-alt"></i></div>
+                            <h4>Penggantian Unit Cepat</h4>
+                            <p>Jika terjadi kendala, kami siap mengganti unit dengan armada pengganti.</p><span
+                                class="badge-soft primary">Garansi 24 Jam</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1614,14 +2094,17 @@
                         <div class="mt-4">
                             <div class="d-flex align-items-center mb-3">
                                 <i class="fas fa-map-marker-alt text-primary-blue fa-2x me-3"></i>
-                                <div><strong>Kantor Pusat</strong><br>Mensana Tower Lantai 6 Unit K, Jalan Raya Kranggan No. 69, Jatisampurna, Kota Bekasi, Jawa Barat 17433</div>
+                                <div><strong>Kantor Pusat</strong><br>Mensana Tower Lantai 6 Unit K, Jalan Raya Kranggan
+                                    No. 69, Jatisampurna, Kota Bekasi, Jawa Barat 17433</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-7 mt-4 mt-lg-0" data-aos="fade-left">
                         <div class="bg-white p-3 rounded-4 shadow">
                             <div class="ratio ratio-16x9">
-                                <iframe src="https://maps.google.com/maps?q=Mensana+Tower+Cibubur,+Jl.+Raya+Kranggan,+Jatisampurna&t=&z=15&ie=UTF8&iwloc=&output=embed" class="rounded-3" style="border:0;" allowfullscreen></iframe>
+                                <iframe
+                                    src="https://maps.google.com/maps?q=Mensana+Tower+Cibubur,+Jl.+Raya+Kranggan,+Jatisampurna&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                    class="rounded-3" style="border:0;" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -1637,14 +2120,26 @@
                         <h2 class="section-title">Siap Mendukung Kebutuhan Anda?</h2>
                         <p>Dapatkan penawaran terbaik untuk sewa kendaraan dan alat berat</p>
                         <form id="waForm" class="row g-3 bg-white p-4 p-md-5 rounded-4 shadow-sm">
-                            <div class="col-md-6"><input type="text" id="namaPerusahaan" class="form-control form-control-lg" placeholder="Nama Perusahaan" required></div>
-                            <div class="col-md-6"><input type="email" id="email" class="form-control form-control-lg" placeholder="Email" required></div>
-                            <div class="col-12"><input type="tel" id="nomorTelepon" class="form-control form-control-lg" placeholder="Nomor Telepon" required></div>
-                            <div class="col-12"><select id="kebutuhan" class="form-select form-select-lg" required><option value="">Pilih Kebutuhan</option><option>Kendaraan Kecil</option><option>Kendaraan Besar</option><option>Mobil Listrik</option><option>Alat Berat</option></select></div>
-                            <div class="col-12"><textarea id="detail" rows="2" class="form-control" placeholder="Detail kebutuhan"></textarea></div>
-                            <div class="col-12"><button type="submit" class="btn btn-primary-blue w-100 py-3"><i class="fab fa-whatsapp me-2"></i> Kirim via WhatsApp</button></div>
+                            <div class="col-md-6"><input type="text" id="namaPerusahaan"
+                                    class="form-control form-control-lg" placeholder="Nama Perusahaan" required></div>
+                            <div class="col-md-6"><input type="email" id="email" class="form-control form-control-lg"
+                                    placeholder="Email" required></div>
+                            <div class="col-12"><input type="tel" id="nomorTelepon" class="form-control form-control-lg"
+                                    placeholder="Nomor Telepon" required></div>
+                            <div class="col-12"><select id="kebutuhan" class="form-select form-select-lg" required>
+                                    <option value="">Pilih Kebutuhan</option>
+                                    <option>Kendaraan Kecil</option>
+                                    <option>Kendaraan Besar</option>
+                                    <option>Mobil Listrik</option>
+                                    <option>Alat Berat</option>
+                                </select></div>
+                            <div class="col-12"><textarea id="detail" rows="2" class="form-control"
+                                    placeholder="Detail kebutuhan"></textarea></div>
+                            <div class="col-12"><button type="submit" class="btn btn-primary-blue w-100 py-3"><i
+                                        class="fab fa-whatsapp me-2"></i> Kirim via WhatsApp</button></div>
                         </form>
-                        <div id="successAlert" class="alert alert-success mt-3" style="display:none;">Pesan terkirim!</div>
+                        <div id="successAlert" class="alert alert-success mt-3" style="display:none;">Pesan terkirim!
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1657,15 +2152,17 @@
                     <div class="col-md-5 mb-4">
                         <img src="image/logo.png" alt="Logo" style="height: 50px; margin-bottom: 1rem;">
                         <h4 class="text-primary-blue">PT Pesona Lintang Kemukus</h4>
-                        <p>Solusi sewa kendaraan & alat berat untuk korporasi, proyek jalan tol, dan industri nasional.</p>
-                        <div><i class="fas fa-map-marker-alt me-2 text-primary-blue"></i> Mensana Tower Lantai 6 Unit K, Jalan Raya Kranggan No. 69, Jatisampurna, Kota Bekasi, Jawa Barat 17433.</div>
+                        <p>Solusi sewa kendaraan & alat berat untuk korporasi dan industri nasional.</p>
+                        <div><i class="fas fa-map-marker-alt me-2 text-primary-blue"></i> Mensana Tower Lantai 6 Unit K,
+                            Jalan Raya Kranggan No. 69, Jatisampurna, Kota Bekasi, Jawa Barat 17433.</div>
                     </div>
                     <div class="col-md-3 mb-4">
                         <h5 class="text-white">Tautan Cepat</h5>
                         <ul class="list-unstyled">
                             <li><a href="#home" class="text-decoration-none text-secondary">Beranda</a></li>
                             <li><a href="#profil" class="text-decoration-none text-secondary">Profil Perusahaan</a></li>
-                            <li><a href="#produk-layanan" class="text-decoration-none text-secondary">Produk & Layanan</a></li>
+                            <li><a href="#produk-layanan" class="text-decoration-none text-secondary">Produk &
+                                    Layanan</a></li>
                             <li><a href="#galeri" class="text-decoration-none text-secondary">Galeri</a></li>
                             <li><a href="#mitra" class="text-decoration-none text-secondary">Partner</a></li>
                             <li><a href="#support" class="text-decoration-none text-secondary">Support</a></li>
@@ -1673,19 +2170,27 @@
                     </div>
                     <div class="col-md-4 mb-4">
                         <h5 class="text-white">Hubungi Kami</h5>
-                        <p><i class="fab fa-whatsapp me-2 text-primary-blue"></i> +62 852 8346 0805<br>
-                        <i class="fas fa-envelope me-2 text-primary-blue"></i> pesonalintangkemukus@gmail.com<br>
-                        <i class="fas fa-phone-alt me-2 text-primary-blue"></i> (021) 1234-5678</p>
+                        <p><i class="fab fa-whatsapp me-2 text-primary-blue"></i> +62 813 3179 5070<br>
+                            <i class="fas fa-envelope me-2 text-primary-blue"></i> pesonalintangkemukus@gmail.com<br>
                         <div class="mt-3">
-                            <a href="#" class="text-primary-blue me-3 fs-5"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="text-primary-blue me-3 fs-5"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="text-primary-blue me-3 fs-5"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="text-primary-blue fs-5"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/pesonalintangkemukus/" target="_blank"
+                                rel="noopener noreferrer" class="text-primary-blue me-3 fs-5 text-decoration-none">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/pt-pesona-lintang-kemukus-197165270/" target="_blank"
+                                rel="noopener noreferrer" class="text-primary-blue me-3 fs-5 text-decoration-none">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@petakus.2gd" target="_blank" rel="noopener noreferrer"
+                                class="text-primary-blue me-3 fs-5 text-decoration-none">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <hr class="opacity-25">
-                <div class="text-center small">© 2026 PT Pesona Lintang Kemukus — Solusi Sewa Kendaraan & Alat Berat Corporate & Tol</div>
+                <div class="text-center small">© 2026 PT Pesona Lintang Kemukus — Solusi Sewa Kendaraan & Alat Berat
+                    Corporate & Tol</div>
             </div>
         </footer>
     </div>
@@ -1694,8 +2199,10 @@
     <div class="galeri-lightbox" id="galeriLightbox">
         <div class="lightbox-inner">
             <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
-            <button class="lightbox-nav-btn lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
-            <button class="lightbox-nav-btn lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+            <button class="lightbox-nav-btn lightbox-prev" id="lightboxPrev"><i
+                    class="fas fa-chevron-left"></i></button>
+            <button class="lightbox-nav-btn lightbox-next" id="lightboxNext"><i
+                    class="fas fa-chevron-right"></i></button>
             <img id="lightboxImg" src="" alt="">
             <div class="lightbox-caption">
                 <h5 id="lightboxTitle"></h5>
@@ -1710,7 +2217,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        (function() {
+        (function () {
             let progress = 0;
             let idx = 0;
             const msgs = ['Menyiapkan...', 'Memuat data...', 'Menyajikan galeri...', 'Selesai'];
@@ -1734,12 +2241,7 @@
                             AOS.init({ duration: 800, once: true });
                             initPartnerSwiper();
                             initHeroSwiper();
-                            const video = document.getElementById('heroVideo');
-                            if (video) {
-                                video.muted = true;
-                                video.volume = 0.3;
-                                video.play().catch(e => console.log);
-                            }
+                            initHeroVideo();
                             initGaleriFilter();
                             initLightbox();
                         }, 500);
@@ -1754,7 +2256,7 @@
                 loop: true,
                 autoplay: { delay: 5000, disableOnInteraction: false },
                 navigation: { nextEl: '.hero-swiper-button-next', prevEl: '.hero-swiper-button-prev' },
-                on: { slideChange: function() { updateHeroPagination(this.realIndex); } }
+                on: { slideChange: function () { updateHeroPagination(this.realIndex); } }
             });
             function updateHeroPagination(index) {
                 dots.forEach((dot, i) => {
@@ -1766,6 +2268,63 @@
                 dot.addEventListener('click', () => { heroSwiper.slideToLoop(index); });
             });
             updateHeroPagination(0);
+        }
+
+        // ===== HERO VIDEO: pastikan selalu autoplay & muted, dan auto-resume jika di-pause browser =====
+        function initHeroVideo() {
+            const video = document.getElementById('heroVideo');
+            const heroSection = document.getElementById('home');
+            if (!video || !heroSection) return;
+
+            video.muted = true;
+            video.volume = 0.3;
+            video.setAttribute('muted', '');
+
+            // Coba play, retry singkat jika browser belum siap (autoplay policy)
+            function tryPlay() {
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {
+                        // beberapa browser butuh sedikit delay setelah load, retry sekali
+                        setTimeout(() => { video.muted = true; video.play().catch(() => { }); }, 300);
+                    });
+                }
+            }
+            tryPlay();
+
+            // Beberapa browser (terutama mobile/Data Saver) otomatis men-pause video
+            // saat resource dianggap tidak terlihat / hemat baterai. Jika itu terjadi,
+            // langsung coba resume kembali secara otomatis.
+            video.addEventListener('pause', () => {
+                // Jangan paksa play kalau tab sedang tidak aktif (hindari error browser)
+                if (document.visibilityState === 'visible') {
+                    tryPlay();
+                }
+            });
+
+            // Saat hero section kembali terlihat di viewport (misal user scroll balik ke atas),
+            // pastikan video kembali bermain.
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && video.paused) {
+                        tryPlay();
+                    }
+                });
+            }, { threshold: 0.05 });
+            io.observe(heroSection);
+
+            // Saat user kembali ke tab (misal sempat pindah tab lalu balik lagi)
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'visible' && video.paused) {
+                    tryPlay();
+                }
+            });
+
+            // Safety net: cek berkala selama beberapa detik pertama setelah load,
+            // untuk menangani kasus video di-pause tepat saat browser mengintervensi resource.
+            window.addEventListener('scroll', () => {
+                if (video.paused) tryPlay();
+            }, { passive: true });
         }
 
         function initPartnerSwiper() {
@@ -1871,7 +2430,7 @@
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
                 const target = document.querySelector(href);
                 if (target && href !== '#') {
@@ -1909,7 +2468,7 @@
         // WhatsApp form
         const waForm = document.getElementById('waForm'), successAlert = document.getElementById('successAlert');
         if (waForm) {
-            waForm.addEventListener('submit', function(e) {
+            waForm.addEventListener('submit', function (e) {
                 e.preventDefault();
                 const nama = document.getElementById('namaPerusahaan').value;
                 const email = document.getElementById('email').value;
@@ -1989,4 +2548,5 @@
         }, 5000);
     </script>
 </body>
+
 </html>
