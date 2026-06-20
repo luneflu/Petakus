@@ -1504,30 +1504,8 @@
 
 <body>
 
-    <!-- LOADER -->
-    <div class="loader-wrapper" id="loaderWrapper">
-        <div class="loader-container">
-            <div class="loader-logo">
-                <img src="image/logo.png" alt="Logo"
-                    onerror="this.src='https://placehold.co/100x100/2563eb/white?text=PLK'">
-            </div>
-            <div class="loader-spinner"></div>
-            <div class="progress-container">
-                <div class="progress-bar" id="progressBar"></div>
-            </div>
-            <div class="percentage" id="percentage">0%</div>
-            <div class="loading-text">
-                MEMUAT SISTEM
-                <div class="loading-dots">
-                    <span>.</span><span>.</span><span>.</span>
-                </div>
-            </div>
-            <div class="loading-message" id="loadingMessage">Menyiapkan antarmuka...</div>
-        </div>
-    </div>
-
     <!-- MAIN CONTENT -->
-    <div class="main-content" id="mainContent">
+    <div class="main-content visible" id="mainContent" style="opacity: 1;">
 
         <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
         <div class="whatsapp-float" id="waFloat">
@@ -2216,38 +2194,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        (function () {
-            let progress = 0;
-            let idx = 0;
-            const msgs = ['Menyiapkan...', 'Memuat data...', 'Menyajikan galeri...', 'Selesai'];
-            const interval = setInterval(() => {
-                if (progress < 100) {
-                    progress += Math.floor(Math.random() * 10) + 1;
-                    if (progress > 100) progress = 100;
-                    document.getElementById('progressBar').style.width = progress + '%';
-                    document.getElementById('percentage').innerText = progress + '%';
-                    if (progress >= 25 && idx === 0) { idx = 1; document.getElementById('loadingMessage').innerText = msgs[1]; }
-                    if (progress >= 50 && idx === 1) { idx = 2; document.getElementById('loadingMessage').innerText = msgs[2]; }
-                    if (progress >= 75 && idx === 2) { idx = 3; document.getElementById('loadingMessage').innerText = msgs[3]; }
-                    if (progress === 100) {
-                        clearInterval(interval);
-                        setTimeout(() => {
-                            document.getElementById('loaderWrapper').classList.add('fade-out');
-                            document.getElementById('mainContent').classList.add('visible');
-                            setTimeout(() => {
-                                document.getElementById('loaderWrapper').style.display = 'none';
-                            }, 500);
                             AOS.init({ duration: 800, once: true });
                             initPartnerSwiper();
                             initHeroSwiper();
                             initHeroVideo();
                             initGaleriFilter();
                             initLightbox();
-                        }, 500);
-                    }
-                }
-            }, 80);
-        })();
 
         function initHeroSwiper() {
             const dots = document.querySelectorAll('.hero-pagination .dot');
