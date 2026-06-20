@@ -2461,14 +2461,25 @@
             const unmuteOnInteraction = () => {
                 if (!userOverride) {
                     userOverride = true;
-                    video.muted = false;
-                    video.play().catch(() => {
+                    // Must ensure video is playing (muted) before unmuting
+                    // Calling play() with audio on a paused video triggers the block
+                    // Instead: ensure playing muted, then just flip muted flag
+                    if (video.paused) {
                         video.muted = true;
-                        document.getElementById('soundIcon').className = 'fas fa-volume-mute';
-                        document.getElementById('soundText').innerText = 'Suara Mati';
-                    });
-                    document.getElementById('soundIcon').className = 'fas fa-volume-up';
-                    document.getElementById('soundText').innerText = 'Suara Aktif';
+                        video.play().then(() => {
+                            video.muted = false;
+                            document.getElementById('soundIcon').className = 'fas fa-volume-up';
+                            document.getElementById('soundText').innerText = 'Suara Aktif';
+                        }).catch(() => {
+                            document.getElementById('soundIcon').className = 'fas fa-volume-mute';
+                            document.getElementById('soundText').innerText = 'Suara Mati';
+                        });
+                    } else {
+                        // Already playing muted — safe to just unmute
+                        video.muted = false;
+                        document.getElementById('soundIcon').className = 'fas fa-volume-up';
+                        document.getElementById('soundText').innerText = 'Suara Aktif';
+                    }
                 }
             };
             ['click', 'touchstart', 'keydown'].forEach(evt => {
