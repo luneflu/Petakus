@@ -2459,15 +2459,17 @@
 
             // Unmute on first interaction
             const unmuteOnInteraction = () => {
-                if (video.muted && !userOverride) {
-                    video.muted = false;
+                if (!userOverride) {
                     userOverride = true;
+                    video.muted = false;
+                    video.play().catch(() => {
+                        video.muted = true;
+                        document.getElementById('soundIcon').className = 'fas fa-volume-mute';
+                        document.getElementById('soundText').innerText = 'Suara Mati';
+                    });
                     document.getElementById('soundIcon').className = 'fas fa-volume-up';
                     document.getElementById('soundText').innerText = 'Suara Aktif';
                 }
-                ['click', 'touchstart', 'keydown'].forEach(evt => {
-                    document.removeEventListener(evt, unmuteOnInteraction);
-                });
             };
             ['click', 'touchstart', 'keydown'].forEach(evt => {
                 document.addEventListener(evt, unmuteOnInteraction, { once: true, passive: true });
