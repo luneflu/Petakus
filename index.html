@@ -2456,6 +2456,22 @@
                     document.getElementById('soundText').innerText = 'Suara Aktif';
                 }
             });
+
+            // Unmute on first interaction
+            const unmuteOnInteraction = () => {
+                if (video.muted && !userOverride) {
+                    video.muted = false;
+                    userOverride = true;
+                    document.getElementById('soundIcon').className = 'fas fa-volume-up';
+                    document.getElementById('soundText').innerText = 'Suara Aktif';
+                }
+                ['click', 'touchstart', 'keydown'].forEach(evt => {
+                    document.removeEventListener(evt, unmuteOnInteraction);
+                });
+            };
+            ['click', 'touchstart', 'keydown'].forEach(evt => {
+                document.addEventListener(evt, unmuteOnInteraction, { once: true, passive: true });
+            });
         }
 
         // Swiper untuk Our Partner (baru) - dengan autoplay dan loop
