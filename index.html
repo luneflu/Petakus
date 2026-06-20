@@ -1037,7 +1037,7 @@
         }
 
         .sound-indicator {
-            position: fixed;
+            position: absolute;
             inset: 0;
             z-index: 15;
             background: transparent;
@@ -1064,7 +1064,7 @@
         }
 
         .sound-indicator .sound-badge {
-            position: fixed;
+            position: absolute;
             bottom: 30px;
             right: 30px;
             background: rgba(0, 0, 0, 0.6);
@@ -1078,10 +1078,6 @@
             font-size: 0.85rem;
             border: 1px solid rgba(255, 255, 255, 0.2);
             pointer-events: none;
-        }
-
-        .sound-indicator.dismissed .sound-badge {
-            display: none;
         }
 
         /* ===== SECTION TITLE ===== */
@@ -2481,6 +2477,13 @@
                     // First tap: full-page overlay click — Chrome treats this as direct media interaction
                     unlocked = true;
                     soundIndicator.classList.add('dismissed');
+                    // Move icon+text out of .sound-badge into the outer div for dismissed state
+                    const badge = soundIndicator.querySelector('.sound-badge');
+                    const icon = document.getElementById('soundIcon');
+                    const text = document.getElementById('soundText');
+                    soundIndicator.appendChild(icon);
+                    soundIndicator.appendChild(text);
+                    badge.remove();
                     video.muted = false;
                     if (video.paused) video.play().catch(() => { video.muted = true; });
                     updateSoundUI();
