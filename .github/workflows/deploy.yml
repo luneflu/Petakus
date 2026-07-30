@@ -18,7 +18,5 @@ jobs:
           # port: ${{ secrets.VPS_PORT }} # Uncomment if not using port 22
           script: |
             cd /srv/Petakus
-            git fetch origin main
-            git reset --hard origin/main
-            npm ci
-            npm run build
+            git pull origin main
+            pnpm run build
