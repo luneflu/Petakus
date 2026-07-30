@@ -1080,7 +1080,7 @@
         }
 
         .sound-indicator .sound-badge {
-            position: absolute;
+            position: fixed;
             bottom: 30px;
             right: 30px;
             background: rgba(0, 0, 0, 0.6);
@@ -1094,6 +1094,7 @@
             font-size: 0.85rem;
             border: 1px solid rgba(255, 255, 255, 0.2);
             pointer-events: none;
+            /* fixed positioning never causes layout shift */
         }
 
         /* ===== SECTION TITLE ===== */
@@ -1910,24 +1911,27 @@
                     </div>
                     <!-- Alat Berat -->
                     <div class="galeri-item" data-category="alat" data-title="Excavator Komatsu"
-                        data-desc="Alat gali untuk proyek jalan tol"><img
-                            src="https://placehold.co/600x450/d97706/white?text=Excavator" alt="Excavator">
+                        data-desc="Alat gali untuk proyek jalan tol"><img loading="lazy"
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450'%3E%3Crect width='600' height='450' fill='%23d97706'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='white'%3EExcavator%3C/text%3E%3C/svg%3E"
+                            alt="Excavator" width="600" height="450">
                         <div class="galeri-item-overlay"><span class="item-badge">Excavator</span>
                             <p class="item-title">Excavator Komatsu</p>
                             <p class="item-desc">Alat gali proyek tol</p>
                         </div>
                     </div>
                     <div class="galeri-item" data-category="alat" data-title="Bulldozer Caterpillar"
-                        data-desc="Perataan lahan dan pembangunan"><img
-                            src="https://placehold.co/600x450/b45309/white?text=Bulldozer" alt="Bulldozer">
+                        data-desc="Perataan lahan dan pembangunan"><img loading="lazy"
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450'%3E%3Crect width='600' height='450' fill='%23b45309'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='white'%3EBulldozer%3C/text%3E%3C/svg%3E"
+                            alt="Bulldozer" width="600" height="450">
                         <div class="galeri-item-overlay"><span class="item-badge">Bulldozer</span>
                             <p class="item-title">Bulldozer Caterpillar</p>
                             <p class="item-desc">Perataan lahan</p>
                         </div>
                     </div>
                     <div class="galeri-item" data-category="alat" data-title="Crane 50 Ton"
-                        data-desc="Angkat material konstruksi"><img
-                            src="https://placehold.co/600x450/92400e/white?text=Crane" alt="Crane">
+                        data-desc="Angkat material konstruksi"><img loading="lazy"
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450'%3E%3Crect width='600' height='450' fill='%2392400e'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='white'%3ECrane%3C/text%3E%3C/svg%3E"
+                            alt="Crane" width="600" height="450">
                         <div class="galeri-item-overlay"><span class="item-badge">Crane</span>
                             <p class="item-title">Crane 50 Ton</p>
                             <p class="item-desc">Angkat material</p>
@@ -2146,10 +2150,12 @@
                     </div>
                     <div class="col-lg-7 mt-4 mt-lg-0" data-aos="fade-left">
                         <div class="bg-white p-3 rounded-4 shadow">
-                            <div class="ratio ratio-16x9">
-                                <iframe
-                                    src="https://maps.google.com/maps?q=Mensana+Tower+Cibubur,+Jl.+Raya+Kranggan,+Jatisampurna&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                                    class="rounded-3" style="border:0;" allowfullscreen loading="lazy" title="Lokasi PT Pesona Lintang Kemukus"></iframe>
+                            <div class="ratio ratio-16x9" id="mapFacade" style="cursor:pointer;background:#e5e7eb;border-radius:0.5rem;overflow:hidden;" onclick="loadMap(this)" title="Klik untuk memuat peta">
+                                <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:12px;color:#374151;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+                                    <span style="font-size:0.9rem;font-weight:600;">Klik untuk memuat peta</span>
+                                    <span style="font-size:0.75rem;color:#6b7280;">Mensana Tower, Jatisampurna, Bekasi</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2268,6 +2274,19 @@
         initHeroVideo();
         initGaleriFilter();
         initLightbox();
+
+        // ===== GOOGLE MAPS FACADE — loads iframe only on user click (saves 456 KiB JS) =====
+        function loadMap(facade) {
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://maps.google.com/maps?q=Mensana+Tower+Cibubur,+Jl.+Raya+Kranggan,+Jatisampurna&t=&z=15&ie=UTF8&iwloc=&output=embed';
+            iframe.className = 'rounded-3';
+            iframe.style.cssText = 'border:0;width:100%;height:100%;';
+            iframe.allowFullscreen = true;
+            iframe.title = 'Lokasi PT Pesona Lintang Kemukus';
+            facade.innerHTML = '';
+            facade.style.cursor = 'default';
+            facade.appendChild(iframe);
+        }
 
         function initHeroSwiper() {
             const dots = document.querySelectorAll('.hero-pagination .dot');
