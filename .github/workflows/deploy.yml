@@ -4,12 +4,13 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: SSH and pull
+      - name: SSH, Pull, and Build
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -17,8 +18,6 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           # port: ${{ secrets.VPS_PORT }} # Uncomment if not using port 22
           script: |
-            cd /srv/Petakus
-            git fetch origin main
-            git reset --hard origin/main
-            npm ci
-            npm run build
+            cd /srv/Chalina
+            git pull origin main
+            pnpm run build
