@@ -4,12 +4,13 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: SSH and pull
+      - name: SSH, Pull, and Build
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.SSH_HOST }}
