@@ -246,7 +246,12 @@ AOS.init({ duration: 800, once: true });
             let unlocked = false;
 
             function updateSoundUI() {
-                document.getElementById('soundIcon').className = video.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+                const iconMute = document.querySelector('.sound-icon-mute');
+                const iconUp = document.querySelector('.sound-icon-up');
+                if (iconMute && iconUp) {
+                    iconMute.style.display = video.muted ? 'inline-block' : 'none';
+                    iconUp.style.display = video.muted ? 'none' : 'inline-block';
+                }
                 document.getElementById('soundText').innerText = video.muted ? 'Suara Mati' : 'Suara Aktif';
             }
 
@@ -257,11 +262,13 @@ AOS.init({ duration: 800, once: true });
                     soundIndicator.classList.add('dismissed');
                     // Move icon+text out of .sound-badge into the outer div for dismissed state
                     const badge = soundIndicator.querySelector('.sound-badge');
-                    const icon = document.getElementById('soundIcon');
+                    const iconWrapper = document.getElementById('soundIconWrapper');
                     const text = document.getElementById('soundText');
-                    soundIndicator.appendChild(icon);
-                    soundIndicator.appendChild(text);
-                    badge.remove();
+                    if (badge) {
+                        soundIndicator.appendChild(iconWrapper);
+                        soundIndicator.appendChild(text);
+                        badge.remove();
+                    }
                     video.muted = false;
                     if (video.paused) video.play().catch(() => { video.muted = true; });
                     updateSoundUI();

@@ -1,5 +1,15 @@
 ---
-
+import { FontAwesomeIcon } from "astro-fontawesome";
+import {
+    faMapMarkerAlt,
+    faEnvelope
+} from "@fortawesome/free-solid-svg-icons";
+import {
+    faWhatsapp,
+    faInstagram,
+    faLinkedin,
+    faTiktok
+} from "@fortawesome/free-brands-svg-icons";
 ---
 
 <footer class="footer pt-5 pb-4">
@@ -20,7 +30,7 @@
                     industri nasional.
                 </p>
                 <div>
-                    <i class="fas fa-map-marker-alt me-2 text-primary-blue"></i> Mensana
+                    <FontAwesomeIcon icon={faMapMarkerAlt} class="me-2 text-primary-blue" /> Mensana
                     Tower Lantai 6 Unit K, Jalan Raya Kranggan No. 69, Jatisampurna,
                     Kota Bekasi, Jawa Barat 17433.
                 </div>
@@ -75,9 +85,9 @@
             <div class="col-md-4 mb-4">
                 <h3 class="h5 text-white">Hubungi Kami</h3>
                 <p>
-                    <i class="fab fa-whatsapp me-2 text-primary-blue"></i> +62 813
+                    <FontAwesomeIcon icon={faWhatsapp} class="me-2 text-primary-blue" /> +62 813
                     3179 5070<br />
-                    <i class="fas fa-envelope me-2 text-primary-blue"></i> cs@pesonalintangkemukus.com<br
+                    <FontAwesomeIcon icon={faEnvelope} class="me-2 text-primary-blue" /> cs@pesonalintangkemukus.com<br
                     />
                     <div class="mt-3">
                         <a
@@ -87,7 +97,7 @@
                             class="text-primary-blue me-3 fs-5 text-decoration-none"
                             aria-label="Instagram"
                         >
-                            <i class="fab fa-instagram"></i>
+                            <FontAwesomeIcon icon={faInstagram} />
                         </a>
                         <a
                             href="https://www.linkedin.com/in/pt-pesona-lintang-kemukus-197165270/"
@@ -96,7 +106,7 @@
                             class="text-primary-blue me-3 fs-5 text-decoration-none"
                             aria-label="LinkedIn"
                         >
-                            <i class="fab fa-linkedin"></i>
+                            <FontAwesomeIcon icon={faLinkedin} />
                         </a>
                         <a
                             href="https://www.tiktok.com/@petakus.2gd"
@@ -105,7 +115,7 @@
                             class="text-primary-blue me-3 fs-5 text-decoration-none"
                             aria-label="TikTok"
                         >
-                            <i class="fab fa-tiktok"></i>
+                            <FontAwesomeIcon icon={faTiktok} />
                         </a>
                     </div>
                 </p>

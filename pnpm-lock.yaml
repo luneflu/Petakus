@@ -17,7 +17,16 @@ importers:
       '@fontsource/poppins':
         specifier: ^5.3.0
         version: 5.3.0
-      '@fortawesome/fontawesome-free':
+      '@fortawesome/fontawesome-svg-core':
+        specifier: ^7.3.1
+        version: 7.3.1
+      '@fortawesome/free-brands-svg-icons':
+        specifier: ^7.3.1
+        version: 7.3.1
+      '@fortawesome/free-regular-svg-icons':
+        specifier: ^7.3.1
+        version: 7.3.1
+      '@fortawesome/free-solid-svg-icons':
         specifier: ^7.3.1
         version: 7.3.1
       aos:
@@ -26,6 +35,9 @@ importers:
       astro:
         specifier: ^7.1.6
         version: 7.1.6(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(rollup@4.62.3)(yaml@2.9.0)
+      astro-fontawesome:
+        specifier: ^0.1.1
+        version: 0.1.1(@fortawesome/fontawesome-svg-core@7.3.1)(astro@7.1.6(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(rollup@4.62.3)(yaml@2.9.0))
       bootstrap:
         specifier: 5.0.2
         version: 5.0.2(@popperjs/core@2.11.8)
@@ -436,8 +448,24 @@ packages:
   '@fontsource/poppins@5.3.0':
     resolution: {integrity: sha512-cms1nM7U6SN8epIV1WMVOV8VsA645aSm3wHfzIQnkk188U341ThbJGSl2Sv54V29gnDbT2arMPfLzvVIIVCceQ==}
 
-  '@fortawesome/fontawesome-free@7.3.1':
-    resolution: {integrity: sha512-wmglKKPDIkgV3aWlZzWECCPoGIkYCulzBwxG9+w7rc5BGapZ6cPMpoPOT8k36J0Ni7PPX6c/rsoMWfS4d1MUMg==}
+  '@fortawesome/fontawesome-common-types@7.3.1':
+    resolution: {integrity: sha512-k0C0sdHmZtAo6dRDtd1Z/qcpyHbL0CKsjV8seMY/21xGhY5Wsv0XRmiI/xEEH4y2c9b1+jvgNs/3EqhV27yUEA==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/fontawesome-svg-core@7.3.1':
+    resolution: {integrity: sha512-BoxVN3PKnMbgStHhjoaky/oWdxHomDqmBVA24IA3KEmssFGeI7u9YT/BJceOjIum/t6TpPa/vcMKaVYQeIQ/3Q==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/free-brands-svg-icons@7.3.1':
+    resolution: {integrity: sha512-8eiNzycuFhy3mZsi5EVO8JpO3H8l7/kSCl4Gk4iUew9hJuzYFqAAD6kqgeEup3+YZ9hL+5cjjorGzrRLkYuURg==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/free-regular-svg-icons@7.3.1':
+    resolution: {integrity: sha512-q1EsmL7Q8DDnkRBUjSvrxbq7c9oVwwVjCn/xa5apKmdp65YSgzUg2y0Ltnd5aDbT6GdAQQdXql5Ha90ArqIReQ==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/free-solid-svg-icons@7.3.1':
+    resolution: {integrity: sha512-v0BLa0eqg7ubvVWeNSHVBs8fWH/GJicERZoJaxJ3FE/lj67VSqzoMg9pzfZVOfLMX10y0pGwQAuxoRVVH2patg==}
     engines: {node: '>=6'}
 
   '@img/colour@1.1.0':
@@ -994,6 +1022,12 @@ packages:
   aria-query@5.3.2:
     resolution: {integrity: sha512-COROpnaoap1E2F000S62r6A60uHZnmlvomhfyT2DlTcrY1OrBKn2UhH7qn5wTC9zMvD0AY7csdPSNwKP+7WiQw==}
     engines: {node: '>= 0.4'}
+
+  astro-fontawesome@0.1.1:
+    resolution: {integrity: sha512-xWnb84Q6S08WQ2yHQke4XqhTGeVIblYyaG487u/ZGgKQYjpScypEGP3h8pttx1mI82mEoqclwDLJFa4m90byVA==}
+    peerDependencies:
+      '@fortawesome/fontawesome-svg-core': ^6.0.0
+      astro: ^4.0.0 || ^5.0.0
 
   astro@7.1.6:
     resolution: {integrity: sha512-83x9rYbHazMaZkYrAFRVZXSQx2moFkz0F7cjTDUF3GWfS0a3p2vZXG1ZdhV86rStHApQCodBJW+XTD37xISIrQ==}
@@ -2287,7 +2321,23 @@ snapshots:
 
   '@fontsource/poppins@5.3.0': {}
 
-  '@fortawesome/fontawesome-free@7.3.1': {}
+  '@fortawesome/fontawesome-common-types@7.3.1': {}
+
+  '@fortawesome/fontawesome-svg-core@7.3.1':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 7.3.1
+
+  '@fortawesome/free-brands-svg-icons@7.3.1':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 7.3.1
+
+  '@fortawesome/free-regular-svg-icons@7.3.1':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 7.3.1
+
+  '@fortawesome/free-solid-svg-icons@7.3.1':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 7.3.1
 
   '@img/colour@1.1.0':
     optional: true
@@ -2712,6 +2762,11 @@ snapshots:
   argparse@2.0.1: {}
 
   aria-query@5.3.2: {}
+
+  astro-fontawesome@0.1.1(@fortawesome/fontawesome-svg-core@7.3.1)(astro@7.1.6(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(rollup@4.62.3)(yaml@2.9.0)):
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 7.3.1
+      astro: 7.1.6(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(rollup@4.62.3)(yaml@2.9.0)
 
   astro@7.1.6(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)(rollup@4.62.3)(yaml@2.9.0):
     dependencies:

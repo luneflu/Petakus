@@ -1,5 +1,12 @@
 ---
 import GaleriItem from "../ui/GaleriItem.astro";
+import { FontAwesomeIcon } from "astro-fontawesome";
+import {
+    faRoad,
+    faChargingStation,
+    faCar,
+    faTruck
+} from "@fortawesome/free-solid-svg-icons";
 
 const galeriData = [
     // Mobil Listrik
@@ -182,16 +189,16 @@ const galeriData = [
         </div>
         <div class="galeri-tabs" data-aos="fade-up" data-aos-delay="80">
             <button class="galeri-tab-btn active" data-filter="tol"
-                ><i class="fas fa-road"></i> Kendaraan Layanan Jalan Tol</button
+                ><FontAwesomeIcon icon={faRoad} /> Kendaraan Layanan Jalan Tol</button
             >
             <button class="galeri-tab-btn" data-filter="ev"
-                ><i class="fas fa-charging-station"></i> Mobil Listrik</button
+                ><FontAwesomeIcon icon={faChargingStation} /> Mobil Listrik</button
             >
             <button class="galeri-tab-btn" data-filter="kecil"
-                ><i class="fas fa-car"></i> Kendaraan Kecil</button
+                ><FontAwesomeIcon icon={faCar} /> Kendaraan Kecil</button
             >
             <button class="galeri-tab-btn" data-filter="besar"
-                ><i class="fas fa-truck"></i> Kendaraan Besar</button
+                ><FontAwesomeIcon icon={faTruck} /> Kendaraan Besar</button
             >
         </div>
         <div class="galeri-grid" data-aos="fade-up" data-aos-delay="150">

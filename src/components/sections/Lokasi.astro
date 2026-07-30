@@ -1,5 +1,6 @@
 ---
-
+import { FontAwesomeIcon } from "astro-fontawesome";
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 ---
 
 <section id="lokasi" class="py-5 bg-soft-blue">
@@ -12,9 +13,7 @@
                 </p>
                 <div class="mt-4">
                     <div class="d-flex align-items-center mb-3">
-                        <i
-                            class="fas fa-map-marker-alt text-primary-blue fa-2x me-3"
-                        ></i>
+                        <FontAwesomeIcon icon={faMapMarkerAlt} class="text-primary-blue fa-2x me-3" />
                         <div>
                             <strong>Kantor Pusat</strong><br />Mensana Tower
                             Lantai 6 Unit K, Jalan Raya Kranggan No. 69,

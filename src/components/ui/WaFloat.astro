@@ -1,5 +1,6 @@
 ---
-
+import { FontAwesomeIcon } from "astro-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 ---
 
 <div class="whatsapp-float" id="waFloat">
@@ -12,7 +13,7 @@
     >
         <span class="pulse-ring"></span>
         <span class="pulse-ring"></span>
-        <i class="fab fa-whatsapp"></i>
+        <FontAwesomeIcon icon={faWhatsapp} />
         <span class="wa-badge">1</span>
     </a>
 </div>

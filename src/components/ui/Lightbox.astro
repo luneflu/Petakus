@@ -1,5 +1,10 @@
 ---
-
+import { FontAwesomeIcon } from "astro-fontawesome";
+import {
+    faTimes,
+    faChevronLeft,
+    faChevronRight
+} from "@fortawesome/free-solid-svg-icons";
 ---
 
 <div class="galeri-lightbox" id="galeriLightbox">
@@ -7,17 +12,17 @@
         <button
             class="lightbox-close"
             id="lightboxClose"
-            aria-label="Tutup Galeri"><i class="fas fa-times"></i></button
+            aria-label="Tutup Galeri"><FontAwesomeIcon icon={faTimes} /></button
         >
         <button
             class="lightbox-nav-btn lightbox-prev"
             id="lightboxPrev"
-            aria-label="Sebelumnya"><i class="fas fa-chevron-left"></i></button
+            aria-label="Sebelumnya"><FontAwesomeIcon icon={faChevronLeft} /></button
         >
         <button
             class="lightbox-nav-btn lightbox-next"
             id="lightboxNext"
-            aria-label="Berikutnya"><i class="fas fa-chevron-right"></i></button
+            aria-label="Berikutnya"><FontAwesomeIcon icon={faChevronRight} /></button
         >
         <img loading="lazy" id="lightboxImg" src="" alt="" />
         <div class="lightbox-caption">

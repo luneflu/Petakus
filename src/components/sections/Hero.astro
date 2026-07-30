@@ -1,5 +1,11 @@
 ---
-
+import { FontAwesomeIcon } from "astro-fontawesome";
+import {
+    faChevronLeft,
+    faChevronRight,
+    faVolumeMute,
+    faVolumeUp
+} from "@fortawesome/free-solid-svg-icons";
 ---
 
 <section id="home" class="hero-section">
@@ -16,7 +22,10 @@
     </video>
     <div class="sound-indicator" id="soundIndicator">
         <div class="sound-badge">
-            <i class="fas fa-volume-mute" id="soundIcon"></i>
+            <span id="soundIconWrapper">
+                <FontAwesomeIcon icon={faVolumeMute} class="sound-icon-mute" />
+                <FontAwesomeIcon icon={faVolumeUp} class="sound-icon-up" style="display: none;" />
+            </span>
             <span id="soundText">Suara Mati</span>
         </div>
     </div>
@@ -98,10 +107,10 @@
             </div>
         </div>
         <div class="hero-swiper-button-prev" aria-label="Previous slide">
-            <i class="fas fa-chevron-left"></i>
+            <FontAwesomeIcon icon={faChevronLeft} />
         </div>
         <div class="hero-swiper-button-next" aria-label="Next slide">
-            <i class="fas fa-chevron-right"></i>
+            <FontAwesomeIcon icon={faChevronRight} />
         </div>
         <div class="hero-pagination">
             <div class="dot" data-index="0"></div>

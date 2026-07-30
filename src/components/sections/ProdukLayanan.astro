@@ -1,24 +1,32 @@
 ---
 import ProdukItem from "../ui/ProdukItem.astro";
+import { FontAwesomeIcon } from "astro-fontawesome";
+import {
+    faChargingStation,
+    faCar,
+    faTruck,
+    faHardHat,
+    faArrowRight
+} from "@fortawesome/free-solid-svg-icons";
 
 const produkData = [
     {
-        icon: "fa-charging-station",
+        icon: faChargingStation,
         title: "Mobil Listrik",
         desc: "Ramah lingkungan, efisien, teknologi modern",
     },
     {
-        icon: "fa-car",
+        icon: faCar,
         title: "Kendaraan Kecil",
         desc: "Sedan, SUV, MPV utk mobilitas eksekutif",
     },
     {
-        icon: "fa-truck",
+        icon: faTruck,
         title: "Kendaraan Besar",
         desc: "Bus, truk box, tronton utk logistik",
     },
     {
-        icon: "fa-hard-hat",
+        icon: faHardHat,
         title: "Alat Berat",
         desc: "Excavator, bulldozer, crane utk proyek tol",
     },
@@ -46,7 +54,7 @@ const produkData = [
         </div>
         <div class="text-center mt-5">
             <a href="#kontak" class="btn btn-primary-blue"
-                >Konsultasi Kebutuhan <i class="fas fa-arrow-right ms-2"></i></a
+                >Konsultasi Kebutuhan <FontAwesomeIcon icon={faArrowRight} class="ms-2" /></a
             >
         </div>
     </div>

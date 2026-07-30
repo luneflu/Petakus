@@ -1,5 +1,6 @@
 ---
-
+import { FontAwesomeIcon } from "astro-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 ---
 
 <section id="kontak" class="py-5 bg-soft-blue">
@@ -80,7 +81,7 @@
                         <button
                             type="submit"
                             class="btn btn-primary-blue w-100 py-3"
-                            ><i class="fab fa-whatsapp me-2"></i> Kirim via WhatsApp</button
+                            ><FontAwesomeIcon icon={faWhatsapp} class="me-2" /> Kirim via WhatsApp</button
                         >
                     </div>
                 </form>

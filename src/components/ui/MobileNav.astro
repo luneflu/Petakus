@@ -1,5 +1,20 @@
 ---
-
+import { FontAwesomeIcon } from "astro-fontawesome";
+import {
+    faTimes,
+    faHome,
+    faChevronRight,
+    faBuilding,
+    faTruck,
+    faImages,
+    faHandshake,
+    faHeadset
+} from "@fortawesome/free-solid-svg-icons";
+import {
+    faWhatsapp,
+    faInstagram,
+    faLinkedinIn
+} from "@fortawesome/free-brands-svg-icons";
 ---
 
 <div class="mobile-nav-overlay" id="mobileNavOverlay">
@@ -17,54 +32,54 @@
         <button
             class="mobile-nav-close"
             id="mobileNavClose"
-            aria-label="Tutup Menu"><i class="fas fa-times"></i></button
+            aria-label="Tutup Menu"><FontAwesomeIcon icon={faTimes} /></button
         >
     </div>
     <div class="mobile-nav-links">
         <a href="#home" class="mobile-nav-link" data-section="home"
-            ><span class="nav-icon"><i class="fas fa-home"></i></span>Beranda<i
-                class="fas fa-chevron-right nav-arrow"></i></a
+            ><span class="nav-icon"><FontAwesomeIcon icon={faHome} /></span>Beranda<FontAwesomeIcon
+                icon={faChevronRight} class="nav-arrow" /></a
         >
         <a href="#profil" class="mobile-nav-link" data-section="profil"
-            ><span class="nav-icon"><i class="fas fa-building"></i></span>Profil
-            Perusahaan<i class="fas fa-chevron-right nav-arrow"></i></a
+            ><span class="nav-icon"><FontAwesomeIcon icon={faBuilding} /></span>Profil
+            Perusahaan<FontAwesomeIcon icon={faChevronRight} class="nav-arrow" /></a
         >
         <a
             href="#produk-layanan"
             class="mobile-nav-link"
             data-section="produk-layanan"
-            ><span class="nav-icon"><i class="fas fa-truck"></i></span>Produk &
-            Layanan<i class="fas fa-chevron-right nav-arrow"></i></a
+            ><span class="nav-icon"><FontAwesomeIcon icon={faTruck} /></span>Produk &
+            Layanan<FontAwesomeIcon icon={faChevronRight} class="nav-arrow" /></a
         >
         <a href="#galeri" class="mobile-nav-link" data-section="galeri"
-            ><span class="nav-icon"><i class="fas fa-images"></i></span>Galeri<i
-                class="fas fa-chevron-right nav-arrow"></i></a
+            ><span class="nav-icon"><FontAwesomeIcon icon={faImages} /></span>Galeri<FontAwesomeIcon
+                icon={faChevronRight} class="nav-arrow" /></a
         >
         <a href="#mitra" class="mobile-nav-link" data-section="mitra"
-            ><span class="nav-icon"><i class="fas fa-handshake"></i></span
-            >Partner & Support<i class="fas fa-chevron-right nav-arrow"></i></a
+            ><span class="nav-icon"><FontAwesomeIcon icon={faHandshake} /></span
+            >Partner & Support<FontAwesomeIcon icon={faChevronRight} class="nav-arrow" /></a
         >
         <a href="#support" class="mobile-nav-link" data-section="support"
-            ><span class="nav-icon"><i class="fas fa-headset"></i></span
-            >Support<i class="fas fa-chevron-right nav-arrow"></i></a
+            ><span class="nav-icon"><FontAwesomeIcon icon={faHeadset} /></span
+            >Support<FontAwesomeIcon icon={faChevronRight} class="nav-arrow" /></a
         >
     </div>
     <div class="mobile-nav-footer">
         <a
             href="https://wa.me/6285156262804?text=Halo%20PT%20Pesona%20Lintang%20Kemukus%2C%20saya%20ingin%20menanyakan%20sewa%20kendaraan"
             class="btn-cta"
-            id="mobileCta"><i class="fab fa-whatsapp"></i> Hubungi Kami</a
+            id="mobileCta"><FontAwesomeIcon icon={faWhatsapp} /> Hubungi Kami</a
         >
         <div class="social-row">
             <a
                 href="https://www.instagram.com/pesonalintangkemukus/"
                 class="text-primary-blue me-3 fs-5"
-                aria-label="Instagram"><i class="fab fa-instagram"></i></a
+                aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a
             >
             <a
                 href="https://www.linkedin.com/in/pt-pesona-lintang-kemukus-197165270/"
                 class="text-primary-blue me-3 fs-5"
-                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a
+                aria-label="LinkedIn"><FontAwesomeIcon icon={faLinkedinIn} /></a
             >
         </div>
     </div>
