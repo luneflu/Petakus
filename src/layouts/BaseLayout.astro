@@ -1,0 +1,76 @@
+---
+import "@fontsource/inter/300.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+import "../styles/global.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "aos/dist/aos.css";
+import "swiper/swiper-bundle.css";
+
+interface Props {
+    title?: string;
+}
+
+const {
+    title = "PT Pesona Lintang Kemukus | Sewa Kendaraan & Alat Berat Corporate & Tol",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            property="og:title"
+            content="PT Pesona Lintang Kemukus | Sewa Kendaraan & Alat Berat Corporate & Tol"
+        />
+        <meta
+            property="og:description"
+            content="PT Pesona Lintang Kemukus menyediakan layanan sewa kendaraan & alat berat utk korporasi & jalan tol di seluruh Indonesia."
+        />
+        <meta
+            property="og:image"
+            content="https://pesonalintangkemukus.com/image/logo.webp"
+        />
+        <meta property="og:url" content="https://pesonalintangkemukus.com" />
+        <meta
+            name="google-site-verification"
+            content="CxbyEpwBOtyahNMGEtO5oJ2dcK2mNU6d29gAW93o3-4"
+        />
+        <meta property="og:type" content="company" />
+        <meta
+            name="description"
+            content="PT Pesona Lintang Kemukus menyediakan layanan sewa kendaraan & alat berat utk korporasi & jalan tol di seluruh Indonesia."
+        />
+        <title>{title}</title>
+
+        <link rel="icon" href="/image/logo.webp" type="image/webp" />
+    </head>
+
+    <body>
+        <div class="main-content visible" id="mainContent" style="opacity: 1;">
+            <slot />
+
+            <!-- SCRIPTS -->
+            <script>
+                import "bootstrap/dist/js/bootstrap.bundle.min.js";
+                import AOS from "aos";
+                import Swiper from "swiper/bundle";
+
+                // Expose AOS and Swiper to window so main.js can access them
+                window.AOS = AOS;
+                window.Swiper = Swiper;
+
+                // Import main.js to bundle it
+                import "../../public/scripts/main.js";
+            </script>
+        </div>
+    </body>
+</html>

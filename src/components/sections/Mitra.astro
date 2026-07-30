@@ -1,0 +1,90 @@
+---
+import PartnerLogo from "../ui/PartnerLogo.astro";
+
+const loyalCustomers = [
+    { src: "/image/pelindoapi1.webp", alt: "Pelindo API", w: "199", h: "63" },
+    { src: "/image/jsmg.webp", alt: "Kementerian PUPR", w: "199", h: "48" },
+    { src: "/image/JNK.webp", alt: "PT Wijaya Karya", w: "199", h: "48" },
+    { src: "/image/ctp.webp", alt: "Sinarmas Logistik", w: "199", h: "48" },
+    {
+        src: "/image/jsmg manado.webp",
+        alt: "Kementerian PUPR",
+        w: "199",
+        h: "48",
+    },
+    {
+        src: "/image/jsmg pasuruan.webp",
+        alt: "PT Wijaya Karya",
+        w: "199",
+        h: "48",
+    },
+    { src: "/image/Pelindo.webp", alt: "Pelindo", w: "199", h: "44" },
+];
+
+const partners = [
+    { src: "/image/1.webp", alt: "Partner 1", w: "195", h: "47" },
+    {
+        src: "/image/Logo_Asuransi_Sinarmas.webp",
+        alt: "Partner 2",
+        w: "195",
+        h: "47",
+    },
+    { src: "/image/Mag.webp", alt: "Partner 3", w: "195", h: "47" },
+    { src: "/image/ramayana.webp", alt: "Partner 4", w: "195", h: "47" },
+    { src: "/image/2.webp", alt: "Partner 5", w: "195", h: "47" },
+    { src: "/image/3.webp", alt: "Partner 6", w: "195", h: "47" },
+    { src: "/image/Garda Oto1.webp", alt: "Partner 8", w: "195", h: "47" },
+    { src: "/image/Adira.webp", alt: "Partner 9", w: "195", h: "47" },
+    { src: "/image/kkb bca.webp", alt: "Partner 10", w: "195", h: "47" },
+    { src: "/image/Maybank.webp", alt: "Partner 11", w: "195", h: "47" },
+    { src: "/image/taf.webp", alt: "Partner 12", w: "195", h: "47" },
+];
+---
+
+<section id="mitra" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Our Loyal Customer</h2>
+            <p>Dipercaya olh berbagai instansi & brand ternama</p>
+        </div>
+
+        <div class="swiper partner-swiper" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                {
+                    loyalCustomers.map((item) => (
+                        <PartnerLogo
+                            imgSrc={item.src}
+                            alt={item.alt}
+                            width={item.w}
+                            height={item.h}
+                        />
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- OUR PARTNER SECTION (Baru) -->
+<section id="our-partner" class="py-5 bg-white">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Our Partner</h2>
+            <p>Bersama mitra terpercaya untuk solusi terbaik</p>
+        </div>
+        <div class="swiper ourpartner-swiper" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                {
+                    partners.map((item) => (
+                        <PartnerLogo
+                            imgSrc={item.src}
+                            alt={item.alt}
+                            width={item.w}
+                            height={item.h}
+                        />
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>

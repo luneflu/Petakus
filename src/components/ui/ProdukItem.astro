@@ -1,0 +1,19 @@
+---
+interface Props {
+    icon: string;
+    title: string;
+    desc: string;
+}
+
+const { icon, title, desc } = Astro.props;
+---
+
+<div class="col-md-6 col-lg-3">
+    <div class="produk-item">
+        <div class="produk-icon mx-auto">
+            <i class={`fas ${icon} fa-3x text-primary-blue`}></i>
+        </div>
+        <h3 class="h5 fw-bold">{title}</h3>
+        <p class="text-muted">{desc}</p>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+---
+interface Props {
+    imgSrc: string;
+    alt: string;
+    width: string;
+    height: string;
+}
+
+const { imgSrc, alt, width, height } = Astro.props;
+---
+
+<div class="swiper-slide">
+    <div>
+        <img
+            loading="lazy"
+            src={imgSrc}
+            alt={alt}
+            class="img-fluid mb-2"
+            width={width}
+            height={height}
+        />
+    </div>
+</div>

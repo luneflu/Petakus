@@ -1,0 +1,97 @@
+---
+
+---
+
+<section id="kontak" class="py-5 bg-soft-blue">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="section-title">Siap Mendukung Kebutuhan Anda?</h2>
+                <p>
+                    Dapatkan penawaran terbaik untuk sewa kendaraan dan alat
+                    berat
+                </p>
+                <form
+                    id="waForm"
+                    class="row g-3 bg-white p-4 p-md-5 rounded-4 shadow-sm"
+                >
+                    <div class="col-md-6">
+                        <label for="namaPerusahaan" class="visually-hidden"
+                            >Nama Perusahaan</label
+                        >
+                        <input
+                            type="text"
+                            id="namaPerusahaan"
+                            class="form-control form-control-lg"
+                            placeholder="Nama Perusahaan"
+                            required
+                        />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="visually-hidden">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            class="form-control form-control-lg"
+                            placeholder="Email"
+                            required
+                        />
+                    </div>
+                    <div class="col-12">
+                        <label for="nomorTelepon" class="visually-hidden"
+                            >Nomor Telepon</label
+                        >
+                        <input
+                            type="tel"
+                            id="nomorTelepon"
+                            class="form-control form-control-lg"
+                            placeholder="Nomor Telepon"
+                            required
+                        />
+                    </div>
+                    <div class="col-12">
+                        <label for="kebutuhan" class="visually-hidden"
+                            >Pilih Kebutuhan</label
+                        >
+                        <select
+                            id="kebutuhan"
+                            class="form-select form-select-lg"
+                            aria-label="Pilih Kebutuhan"
+                            required
+                        >
+                            <option value="">Pilih Kebutuhan</option>
+                            <option>Kendaraan Kecil</option>
+                            <option>Kendaraan Besar</option>
+                            <option>Mobil Listrik</option>
+                            <option>Alat Berat</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <label for="detail" class="visually-hidden"
+                            >Detail kebutuhan</label
+                        >
+                        <textarea
+                            id="detail"
+                            rows="2"
+                            class="form-control"
+                            placeholder="Detail kebutuhan"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button
+                            type="submit"
+                            class="btn btn-primary-blue w-100 py-3"
+                            ><i class="fab fa-whatsapp me-2"></i> Kirim via WhatsApp</button
+                        >
+                    </div>
+                </form>
+                <div
+                    id="successAlert"
+                    class="alert alert-success mt-3"
+                    style="display:none;"
+                >
+                    Pesan terkirim!
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

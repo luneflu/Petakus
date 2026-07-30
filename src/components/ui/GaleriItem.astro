@@ -1,0 +1,43 @@
+---
+interface Props {
+    category: string;
+    title: string;
+    desc: string;
+    imgSrc: string;
+    imgAlt?: string;
+    imgWidth?: string;
+    imgHeight?: string;
+    badge: string;
+}
+
+const {
+    category,
+    title,
+    desc,
+    imgSrc,
+    imgAlt = title,
+    imgWidth = "600",
+    imgHeight = "450",
+    badge,
+} = Astro.props;
+---
+
+<div
+    class="galeri-item"
+    data-category={category}
+    data-title={title}
+    data-desc={desc}
+>
+    <img
+        loading="lazy"
+        src={imgSrc}
+        alt={imgAlt}
+        width={imgWidth}
+        height={imgHeight}
+    />
+    <div class="galeri-item-overlay">
+        <span class="item-badge">{badge}</span>
+        <p class="item-title">{title}</p>
+        <p class="item-desc">{desc}</p>
+    </div>
+</div>

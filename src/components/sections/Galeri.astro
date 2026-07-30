@@ -1,0 +1,225 @@
+---
+import GaleriItem from "../ui/GaleriItem.astro";
+
+const galeriData = [
+    // Mobil Listrik
+    {
+        category: "ev",
+        title: "Hyundai Ioniq 5",
+        desc: "SUV listrik premium",
+        imgSrc: "/image/ioniq5.webp",
+        badge: "EV",
+        dataDesc: "SUV listrik premium, jarak tempuh 450km",
+    },
+    {
+        category: "ev",
+        title: "BYD Atto 3",
+        desc: "Desain futuristik",
+        imgSrc: "/image/atto3.webp",
+        badge: "EV",
+        dataDesc: "Desain futuristik, baterai blade technology",
+    },
+    {
+        category: "ev",
+        title: "DFSK Gelora",
+        desc: "Desain futuristik",
+        imgSrc: "/image/ev 1.webp",
+        badge: "EV",
+        dataDesc: "Desain futuristik, baterai blade technology",
+    },
+    // Kendaraan Kecil
+    {
+        category: "kecil",
+        title: "Toyota Hilux Rangga",
+        desc: "Shuttle Pickup",
+        imgSrc: "/image/kecil 1.webp",
+        badge: "MPV",
+    },
+    {
+        category: "kecil",
+        title: "Toyota Hilux Double Cabin",
+        desc: "Mobil Customer Service",
+        imgSrc: "/image/kecil 2.webp",
+        badge: "SUV",
+    },
+    {
+        category: "kecil",
+        title: "Toyota New Vios",
+        desc: "Patroli Jalan Raya",
+        imgSrc: "/image/kecil 3.webp",
+        badge: "MPV",
+    },
+    {
+        category: "kecil",
+        title: "Daihatsu New Xenia",
+        desc: "Kendaraan Operasional",
+        imgSrc: "/image/kecil 4.webp",
+        badge: "Sedan",
+    },
+    {
+        category: "kecil",
+        title: "Toyota New Innova Reborn",
+        desc: "Kendaraan Operasional Manager",
+        imgSrc: "/image/kecil 5.webp",
+        badge: "SUV",
+    },
+    {
+        category: "kecil",
+        title: "Mitsubishi Xpander", // Wait, title in item-title was Xpander but data-title was Toyota New Corolla Altis. I'll use the data-title as title since that's what's passed in
+        dataTitle: "Toyota New Corolla Altis",
+        desc: "Patroli Jalan Raya",
+        imgSrc: "/image/kecil 6.webp",
+        badge: "MPV",
+        overrideOverlayTitle: "Mitsubishi Xpander",
+    },
+    // Kendaraan Besar
+    {
+        category: "besar",
+        title: "Truk Derek 35 Ton",
+        desc: "Evakuasi Kendaraan Muatan Besar",
+        imgSrc: "/image/mbl 6.webp",
+        badge: "Truck",
+        imgAlt: "Evakuasi Mobil Kecil", // from original HTML
+    },
+    {
+        category: "besar",
+        title: "Truk Tangki Air 5000L",
+        desc: "Penyiraman/Perawatan Jalan Tol",
+        imgSrc: "/image/besar 1.webp",
+        badge: "Truck",
+    },
+    {
+        category: "besar",
+        title: "Truk Towing 10 Ton",
+        desc: "Evakuasi Mobil Kecil",
+        imgSrc: "/image/besar 2.webp",
+        badge: "Truk Towing 10 Ton",
+        overrideOverlayTitle: "Tronton Wingbox",
+    },
+    // Alat Berat
+    {
+        category: "alat",
+        title: "Excavator Komatsu",
+        desc: "Alat gali proyek tol",
+        imgSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450'%3E%3Crect width='600' height='450' fill='%23d97706'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='white'%3EExcavator%3C/text%3E%3C/svg%3E",
+        badge: "Excavator",
+        dataDesc: "Alat gali utk proyek jalan tol",
+    },
+    {
+        category: "alat",
+        title: "Bulldozer Caterpillar",
+        desc: "Perataan lahan",
+        imgSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450'%3E%3Crect width='600' height='450' fill='%23b45309'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='white'%3EBulldozer%3C/text%3E%3C/svg%3E",
+        badge: "Bulldozer",
+        dataDesc: "Perataan lahan & pembangunan",
+    },
+    {
+        category: "alat",
+        title: "Crane 50 Ton",
+        desc: "Angkat material",
+        imgSrc: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450'%3E%3Crect width='600' height='450' fill='%2392400e'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='white'%3ECrane%3C/text%3E%3C/svg%3E",
+        badge: "Crane",
+        dataDesc: "Angkat material konstruksi",
+    },
+    // Kendaraan Jalan Tol
+    {
+        category: "tol",
+        title: "Kendaraan Operasional Jalan Tol",
+        desc: "Mobile Customer Service",
+        imgSrc: "/image/mbl 1.webp",
+        badge: "Tol",
+    },
+    {
+        category: "tol",
+        title: "Kendaraan Layanan Jalan Tol",
+        desc: "Truk Derek 35 Ton",
+        imgSrc: "/image/mbl 6.webp",
+        badge: "Tol",
+    },
+    {
+        category: "tol",
+        title: "Kendaraan Layanan Jalan Tol",
+        desc: "Ambulance, Kamtib, MCS",
+        imgSrc: "/image/mbl 3.webp",
+        badge: "Tol",
+        imgAlt: "Ambulance",
+    },
+    {
+        category: "tol",
+        title: "Kendaraan Layanan Jalan Tol",
+        desc: "Keamanan & Ketertiban",
+        imgSrc: "/image/mbl 4.webp",
+        badge: "Tol",
+        imgAlt: "Sedan",
+    },
+    {
+        category: "tol",
+        title: "Kendaraan Layanan Jalan Tol",
+        desc: "Truk Derek 25 Ton",
+        imgSrc: "/image/mbl 5.webp",
+        badge: "Tol",
+        imgAlt: "Truk Derek",
+    },
+    {
+        category: "tol",
+        title: "Hiace",
+        desc: "Shuttle Bus",
+        imgSrc: "/image/mbl_7.webp",
+        badge: "Tol",
+        imgAlt: "Bus Shuttle",
+        imgWidth: "961",
+        imgHeight: "541",
+        overrideOverlayTitle: "Bus Shuttle Tol",
+    },
+];
+---
+
+<section id="galeri" class="py-5 bg-soft-blue">
+    <div class="container-fluid px-0">
+        <div class="text-center mb-4" data-aos="fade-up">
+            <h2 class="section-title">Galeri Kendaraan</h2>
+            <p class="text-muted mt-3">Koleksi kendaraan unggulan kami</p>
+        </div>
+        <div class="galeri-tabs" data-aos="fade-up" data-aos-delay="80">
+            <button class="galeri-tab-btn active" data-filter="tol"
+                ><i class="fas fa-road"></i> Kendaraan Layanan Jalan Tol</button
+            >
+            <button class="galeri-tab-btn" data-filter="ev"
+                ><i class="fas fa-charging-station"></i> Mobil Listrik</button
+            >
+            <button class="galeri-tab-btn" data-filter="kecil"
+                ><i class="fas fa-car"></i> Kendaraan Kecil</button
+            >
+            <button class="galeri-tab-btn" data-filter="besar"
+                ><i class="fas fa-truck"></i> Kendaraan Besar</button
+            >
+        </div>
+        <div class="galeri-grid" data-aos="fade-up" data-aos-delay="150">
+            {
+                galeriData.map((item) => (
+                    <div
+                        class="galeri-item"
+                        data-category={item.category}
+                        data-title={item.dataTitle || item.title}
+                        data-desc={item.dataDesc || item.desc}
+                    >
+                        <img
+                            loading="lazy"
+                            src={item.imgSrc}
+                            alt={item.imgAlt || item.title}
+                            width={item.imgWidth || "600"}
+                            height={item.imgHeight || "450"}
+                        />
+                        <div class="galeri-item-overlay">
+                            <span class="item-badge">{item.badge}</span>
+                            <p class="item-title">
+                                {item.overrideOverlayTitle || item.title}
+                            </p>
+                            <p class="item-desc">{item.desc}</p>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

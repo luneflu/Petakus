@@ -32,7 +32,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     background-color: #f8fafc;
     color: #1e293b;
     overflow-x: hidden;
@@ -47,7 +47,7 @@ h4,
 .navbar-brand,
 .btn,
 .section-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 /* font-display: swap for external fonts loaded via @font-face */
@@ -154,7 +154,7 @@ section[id] {
     justify-content: center;
     width: 64px;
     height: 64px;
-    background: #25D366;
+    background: #25d366;
     color: white;
     border-radius: 50%;
     text-decoration: none;
@@ -175,7 +175,7 @@ section[id] {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 2px solid #25D366;
+    border: 2px solid #25d366;
     animation: pulse-ring 2s ease-out infinite;
 }
 
@@ -234,7 +234,6 @@ section[id] {
 }
 
 @keyframes badge-pulse {
-
     0%,
     100% {
         transform: scale(1);
@@ -289,7 +288,9 @@ section[id] {
     justify-content: center;
     align-items: center;
     z-index: 99999;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    transition:
+        opacity 0.5s ease-in-out,
+        visibility 0.5s ease-in-out;
 }
 
 .loader-wrapper.fade-out {
@@ -314,7 +315,6 @@ section[id] {
 }
 
 @keyframes pulse {
-
     0%,
     100% {
         transform: scale(1);
@@ -364,7 +364,7 @@ section[id] {
 
 .loading-text {
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.1rem;
     margin-top: 20px;
     letter-spacing: 2px;
@@ -388,7 +388,6 @@ section[id] {
 }
 
 @keyframes blink {
-
     0%,
     80%,
     100% {
@@ -405,7 +404,7 @@ section[id] {
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 10px;
-    font-family: 'Poppins', monospace;
+    font-family: "Poppins", monospace;
 }
 
 .loading-message {
@@ -431,7 +430,10 @@ section[id] {
     left: 0 !important;
     right: 0 !important;
     width: 100% !important;
-    transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out, padding 0.4s ease-in-out !important;
+    transition:
+        background 0.4s ease-in-out,
+        box-shadow 0.4s ease-in-out,
+        padding 0.4s ease-in-out !important;
 }
 
 .navbar {
@@ -490,7 +492,7 @@ section[id] {
     color: white !important;
 }
 
-.navbar>.container {
+.navbar > .container {
     flex-wrap: nowrap;
 }
 
@@ -512,7 +514,7 @@ section[id] {
 
 .navbar .nav-link.active::after,
 .navbar .nav-link::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -5px;
     left: 50%;
@@ -520,7 +522,9 @@ section[id] {
     height: 2px;
     background: var(--accent-blue);
     border-radius: 2px;
-    transition: width 0.35s ease, opacity 0.35s ease;
+    transition:
+        width 0.35s ease,
+        opacity 0.35s ease;
 }
 
 .navbar .nav-link::after {
@@ -546,7 +550,6 @@ section[id] {
 }
 
 @media (max-width: 991.98px) {
-
     .navbar-collapse,
     .navbar-toggler {
         display: none !important;
@@ -669,7 +672,7 @@ section[id] {
 
 .mobile-nav-header .brand-info span {
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 0.9rem;
     line-height: 1.3;
@@ -711,7 +714,7 @@ section[id] {
     border-radius: 14px;
     color: rgba(255, 255, 255, 0.75) !important;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 1.05rem;
     transition: all 0.2s;
@@ -776,7 +779,7 @@ section[id] {
     padding: 15px;
     background: var(--primary-blue);
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
     border-radius: 14px;
     text-decoration: none;
@@ -942,7 +945,8 @@ section[id] {
 }
 
 .hero-logo-wrapper {
-    animation: slideInFromRight 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation: slideInFromRight 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        forwards;
     display: inline-block;
     text-align: center;
 }
@@ -967,7 +971,8 @@ section[id] {
 }
 
 .slide-content {
-    animation: slideInFromRight 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation: slideInFromRight 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        forwards;
 }
 
 .slogan-text {
@@ -1042,7 +1047,9 @@ section[id] {
     background: var(--primary-blue);
     width: 30px;
     border-radius: 10px;
-    transition: width 0.3s, background-color 0.3s;
+    transition:
+        width 0.3s,
+        background-color 0.3s;
 }
 
 .sound-indicator {
@@ -1099,7 +1106,7 @@ section[id] {
 }
 
 .section-title:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -12px;
     left: 0;
@@ -1227,7 +1234,7 @@ section[id] {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(13, 110, 253, 0.10);
+    background: rgba(13, 110, 253, 0.1);
     color: #0d6efd;
     font-size: 28px;
     transition: all 0.3s ease;
@@ -1267,12 +1274,12 @@ section[id] {
     border-radius: 999px;
     font-size: 12px;
     font-weight: 600;
-    background: rgba(40, 167, 69, 0.10);
+    background: rgba(40, 167, 69, 0.1);
     color: #28a745;
 }
 
 .badge-soft.primary {
-    background: rgba(13, 110, 253, 0.10);
+    background: rgba(13, 110, 253, 0.1);
     color: #0d6efd;
 }
 
@@ -1294,7 +1301,7 @@ section[id] {
     border: 1.5px solid #cbd5e1;
     background: white;
     color: #64748b;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 0.85rem;
     font-weight: 500;
     cursor: pointer;
@@ -1363,7 +1370,12 @@ section[id] {
 .galeri-item-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(10, 37, 64, 0.85) 0%, rgba(10, 37, 64, 0.1) 55%, transparent 100%);
+    background: linear-gradient(
+        to top,
+        rgba(10, 37, 64, 0.85) 0%,
+        rgba(10, 37, 64, 0.1) 55%,
+        transparent 100%
+    );
     opacity: 0;
     transition: opacity 0.35s ease;
     display: flex;
@@ -1378,7 +1390,7 @@ section[id] {
 
 .galeri-item-overlay .item-title {
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
     margin: 0 0 4px;
@@ -1455,7 +1467,7 @@ section[id] {
 }
 
 .lightbox-caption .h5-style {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
     margin-bottom: 4px;
     font-size: 1.25rem;
