@@ -1,3 +1,4 @@
+window.addEventListener('load', function() {
 AOS.init({ duration: 800, once: true });
         initPartnerSwiper();
         initHeroSwiper();
@@ -335,3 +336,4 @@ AOS.init({ duration: 800, once: true });
                 setTimeout(() => { badge.style.display = 'none'; }, 800);
             }
         }, 5000);
+});
