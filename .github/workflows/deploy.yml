@@ -19,5 +19,3 @@ jobs:
           script: |
             cd /srv/Petakus
             git pull origin main
-            npm ci
-            npm run build
