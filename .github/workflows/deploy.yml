@@ -18,6 +18,8 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           # port: ${{ secrets.VPS_PORT }} # Uncomment if not using port 22
           script: |
-            cd /srv/Chalina
-            git pull origin main
-            pnpm run build
+            cd /srv/Petakus
+            git fetch origin main
+            git reset --hard origin/main
+            npm ci
+            npm run build
