@@ -69,6 +69,18 @@ section[id] {
     --text-dark: #0f172a;
 }
 
+.text-muted {
+    color: #475569 !important; /* Improved contrast */
+}
+
+.bg-soft-blue {
+    background-color: #f1f5f9 !important;
+}
+
+.text-secondary {
+    color: #475569 !important;
+}
+
 /* ===== UTILITIES ===== */
 .bg-primary-blue {
     background-color: var(--primary-blue) !important;
@@ -1023,13 +1035,14 @@ section[id] {
     background: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.3s;
 }
 
 .hero-pagination .dot.active {
     background: var(--primary-blue);
     width: 30px;
     border-radius: 10px;
+    transition: width 0.3s, background-color 0.3s;
 }
 
 .sound-indicator {
@@ -1111,7 +1124,7 @@ section[id] {
 
 /* ===== COMPONENTS ===== */
 .bg-soft-blue {
-    background-color: #eff6ff;
+    background-color: #f1f5f9;
 }
 
 .visi-misi-card,

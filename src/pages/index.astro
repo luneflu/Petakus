@@ -7,20 +7,23 @@ import "../styles/global.css";
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="google-site-verification"
-            content="CxbyEpwBOtyahNMGEtO5oJ2dcK2mNU6d29gAW93o3-4"
-        />
+        <meta property="og:title" content="PT Pesona Lintang Kemukus | Sewa Kendaraan & Alat Berat Corporate & Tol" />
+        <meta property="og:description" content="PT Pesona Lintang Kemukus menyediakan layanan sewa kendaraan dan alat berat untuk korporasi dan jalan tol di seluruh Indonesia." />
+        <meta property="og:image" content="https://pesonalintangkemukus.com/image/logo.webp" />
+        <meta property="og:url" content="https://pesonalintangkemukus.com" />
+        <meta name="google-site-verification" content="CxbyEpwBOtyahNMGEtO5oJ2dcK2mNU6d29gAW93o3-4" />
+        <meta property="og:type" content="company" />
+        <meta name="description" content="PT Pesona Lintang Kemukus menyediakan layanan sewa kendaraan dan alat berat untuk korporasi dan jalan tol di seluruh Indonesia." />
         <title>
             PT Pesona Lintang Kemukus | Sewa Kendaraan & Alat Berat Corporate &
             Tol
         </title>
 
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+
         <!-- Preconnect to critical origins -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
         <!-- Preload critical fonts -->
         <link
@@ -42,7 +45,15 @@ import "../styles/global.css";
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
             rel="stylesheet"
+            media="print"
+            onload="this.media='all'"
         />
+        <noscript>
+            <link
+                href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+                rel="stylesheet"
+            />
+        </noscript>
         <!-- FontAwesome: async (icons are non-critical for first paint) -->
         <link
             rel="stylesheet"
@@ -58,17 +69,9 @@ import "../styles/global.css";
         >
         <!-- Google Fonts: async -->
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
             rel="stylesheet"
-            media="print"
-            onload="this.media='all'"
         />
-        <noscript
-            ><link
-                href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
-                rel="stylesheet"
-            /></noscript
-        >
         <!-- AOS: async (scroll animations, non-critical) -->
         <link
             href="https://unpkg.com/aos@2.3.1/dist/aos.css"
@@ -200,9 +203,9 @@ import "../styles/global.css";
                         <img
                             src="/image/logo.webp"
                             alt="Logo"
-                            width="38"
+                            width="66"
                             height="38"
-                            onerror="this.src='https://placehold.co/38x38/2563eb/white?text=PLK'"
+                            onerror="this.src='https://placehold.co/66x38/2563eb/white?text=PLK'"
                         />
                         <span>PESONA LINTANG<br />KEMUKUS</span>
                     </div>
@@ -300,6 +303,7 @@ import "../styles/global.css";
                     id="heroVideo"
                 >
                     <source src="/video/bg2.mp4" type="video/mp4" />
+                    <track kind="captions" src="" srclang="id" label="Indonesian" />
                 </video>
                 <div class="sound-indicator" id="soundIndicator">
                     <div class="sound-badge">
@@ -391,10 +395,10 @@ import "../styles/global.css";
                             </div>
                         </div>
                     </div>
-                    <div class="hero-swiper-button-prev">
+                    <div class="hero-swiper-button-prev" aria-label="Previous slide">
                         <i class="fas fa-chevron-left"></i>
                     </div>
-                    <div class="hero-swiper-button-next">
+                    <div class="hero-swiper-button-next" aria-label="Next slide">
                         <i class="fas fa-chevron-right"></i>
                     </div>
                     <div class="hero-pagination">
@@ -427,21 +431,25 @@ import "../styles/global.css";
                                 <div class="col-md-6 mb-3">
                                     <i
                                         class="fas fa-check-circle text-primary-blue me-2"
+                                        aria-hidden="true"
                                     ></i> 500+ Unit Kendaraan & Alat Berat
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <i
                                         class="fas fa-check-circle text-primary-blue me-2"
+                                        aria-hidden="true"
                                     ></i> 100+ Mitra Corporate Aktif
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <i
                                         class="fas fa-check-circle text-primary-blue me-2"
+                                        aria-hidden="true"
                                     ></i> 24/7 Emergency Support
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <i
                                         class="fas fa-check-circle text-primary-blue me-2"
+                                        aria-hidden="true"
                                     ></i> ISO & K3 Bersertifikat
                                 </div>
                             </div>
@@ -475,21 +483,25 @@ import "../styles/global.css";
                                     <li class="mb-2">
                                         <i
                                             class="fas fa-check-circle text-primary-blue me-2"
+                                            aria-hidden="true"
                                         ></i> Membangun kerjasama dengan pihak terkait
                                     </li>
                                     <li class="mb-2">
                                         <i
                                             class="fas fa-check-circle text-primary-blue me-2"
+                                            aria-hidden="true"
                                         ></i> Menyediakan fasilitas terbaik
                                     </li>
                                     <li class="mb-2">
                                         <i
                                             class="fas fa-check-circle text-primary-blue me-2"
+                                            aria-hidden="true"
                                         ></i> Menyediakan Kendaraan terbaik
                                     </li>
                                     <li class="mb-2">
                                         <i
                                             class="fas fa-check-circle text-primary-blue me-2"
+                                            aria-hidden="true"
                                         ></i> Memberikan pelayanan prima
                                     </li>
                                 </ul>
@@ -529,7 +541,7 @@ import "../styles/global.css";
                                         class="fas fa-car fa-3x text-primary-blue"
                                     ></i>
                                 </div>
-                                <h5 class="fw-bold">Kendaraan Kecil</h5>
+                                <h3 class="h5 fw-bold">Kendaraan Kecil</h3>
                                 <p class="text-muted">
                                     Sedan, SUV, MPV untuk mobilitas eksekutif
                                 </p>
@@ -542,7 +554,7 @@ import "../styles/global.css";
                                         class="fas fa-truck fa-3x text-primary-blue"
                                     ></i>
                                 </div>
-                                <h5 class="fw-bold">Kendaraan Besar</h5>
+                                <h3 class="h5 fw-bold">Kendaraan Besar</h3>
                                 <p class="text-muted">
                                     Bus, truk box, tronton untuk logistik
                                 </p>
@@ -555,7 +567,7 @@ import "../styles/global.css";
                                         class="fas fa-hard-hat fa-3x text-primary-blue"
                                     ></i>
                                 </div>
-                                <h5 class="fw-bold">Alat Berat</h5>
+                                <h3 class="h5 fw-bold">Alat Berat</h3>
                                 <p class="text-muted">
                                     Excavator, bulldozer, crane untuk proyek tol
                                 </p>
@@ -614,6 +626,8 @@ import "../styles/global.css";
                                 loading="lazy"
                                 src="/image/ioniq5.webp"
                                 alt="Hyundai Ioniq 5"
+                                width="600"
+                                height="450"
                             />
                             <div class="galeri-item-overlay">
                                 <span class="item-badge">EV</span>
@@ -631,6 +645,8 @@ import "../styles/global.css";
                                 loading="lazy"
                                 src="/image/atto3.webp"
                                 alt="BYD Atto 3"
+                                width="600"
+                                height="450"
                             />
                             <div class="galeri-item-overlay">
                                 <span class="item-badge">EV</span>
@@ -648,6 +664,8 @@ import "../styles/global.css";
                                 loading="lazy"
                                 src="/image/ev 1.webp"
                                 alt="DFSK Gelora"
+                                width="600"
+                                height="450"
                             />
                             <div class="galeri-item-overlay">
                                 <span class="item-badge">EV</span>
@@ -909,6 +927,8 @@ import "../styles/global.css";
                                 loading="lazy"
                                 src="/image/mbl 1.webp"
                                 alt="Kendaraan Operasional Jalan Tol"
+                                width="600"
+                                height="450"
                             />
                             <div class="galeri-item-overlay">
                                 <span class="item-badge">Tol</span>
@@ -928,6 +948,8 @@ import "../styles/global.css";
                                 loading="lazy"
                                 src="/image/mbl 6.webp"
                                 alt="Kendaraan Layanan Jalan Tol"
+                                width="600"
+                                height="450"
                             />
                             <div class="galeri-item-overlay">
                                 <span class="item-badge">Tol</span>
@@ -947,6 +969,8 @@ import "../styles/global.css";
                                 loading="lazy"
                                 src="/image/mbl 3.webp"
                                 alt="Ambulance"
+                                width="600"
+                                height="450"
                             />
                             <div class="galeri-item-overlay">
                                 <span class="item-badge">Tol</span>
@@ -966,6 +990,8 @@ import "../styles/global.css";
                                 loading="lazy"
                                 src="/image/mbl 4.webp"
                                 alt="Sedan"
+                                width="600"
+                                height="450"
                             />
                             <div class="galeri-item-overlay">
                                 <span class="item-badge">Tol</span>
@@ -985,6 +1011,8 @@ import "../styles/global.css";
                                 loading="lazy"
                                 src="/image/mbl 5.webp"
                                 alt="Truk Derek"
+                                width="600"
+                                height="450"
                             />
                             <div class="galeri-item-overlay">
                                 <span class="item-badge">Tol</span>
@@ -1169,6 +1197,8 @@ import "../styles/global.css";
                                         src="/image/ramayana.webp"
                                         alt="Partner 4"
                                         class="img-fluid mb-2"
+                                        width="195"
+                                        height="47"
                                     />
                                 </div>
                             </div>
@@ -1179,6 +1209,8 @@ import "../styles/global.css";
                                         src="/image/2.webp"
                                         alt="Partner 5"
                                         class="img-fluid mb-2"
+                                        width="195"
+                                        height="47"
                                     />
                                 </div>
                             </div>
@@ -1189,6 +1221,8 @@ import "../styles/global.css";
                                         src="/image/3.webp"
                                         alt="Partner 6"
                                         class="img-fluid mb-2"
+                                        width="195"
+                                        height="47"
                                     />
                                 </div>
                             </div>
@@ -1200,6 +1234,8 @@ import "../styles/global.css";
                                         src="/image/Garda Oto1.webp"
                                         alt="Partner 8"
                                         class="img-fluid mb-2"
+                                        width="195"
+                                        height="47"
                                     />
                                 </div>
                             </div>
@@ -1210,6 +1246,8 @@ import "../styles/global.css";
                                         src="/image/Adira.webp"
                                         alt="Partner 9"
                                         class="img-fluid mb-2"
+                                        width="195"
+                                        height="47"
                                     />
                                 </div>
                             </div>
@@ -1220,6 +1258,8 @@ import "../styles/global.css";
                                         src="/image/kkb bca.webp"
                                         alt="Partner 10"
                                         class="img-fluid mb-2"
+                                        width="195"
+                                        height="47"
                                     />
                                 </div>
                             </div>
@@ -1230,6 +1270,8 @@ import "../styles/global.css";
                                         src="/image/Maybank.webp"
                                         alt="Partner 11"
                                         class="img-fluid mb-2"
+                                        width="195"
+                                        height="47"
                                     />
                                 </div>
                             </div>
@@ -1240,6 +1282,8 @@ import "../styles/global.css";
                                         src="/image/taf.webp"
                                         alt="Partner 12"
                                         class="img-fluid mb-2"
+                                        width="195"
+                                        height="47"
                                     />
                                 </div>
                             </div>
@@ -1378,6 +1422,7 @@ import "../styles/global.css";
                                         class="row g-3 bg-white p-4 p-md-5 rounded-4 shadow-sm"
                                     >
                                         <div class="col-md-6">
+                                            <label for="namaPerusahaan" class="visually-hidden">Nama Perusahaan</label>
                                             <input
                                                 type="text"
                                                 id="namaPerusahaan"
@@ -1387,6 +1432,7 @@ import "../styles/global.css";
                                             />
                                         </div>
                                         <div class="col-md-6">
+                                            <label for="email" class="visually-hidden">Email</label>
                                             <input
                                                 type="email"
                                                 id="email"
@@ -1396,6 +1442,7 @@ import "../styles/global.css";
                                             />
                                         </div>
                                         <div class="col-12">
+                                            <label for="nomorTelepon" class="visually-hidden">Nomor Telepon</label>
                                             <input
                                                 type="tel"
                                                 id="nomorTelepon"
@@ -1405,6 +1452,7 @@ import "../styles/global.css";
                                             />
                                         </div>
                                         <div class="col-12">
+                                            <label for="kebutuhan" class="visually-hidden">Pilih Kebutuhan</label>
                                             <select
                                                 id="kebutuhan"
                                                 class="form-select form-select-lg"
@@ -1421,6 +1469,7 @@ import "../styles/global.css";
                                             </select>
                                         </div>
                                         <div class="col-12">
+                                            <label for="detail" class="visually-hidden">Detail kebutuhan</label>
                                             <textarea
                                                 id="detail"
                                                 rows="2"
@@ -1478,7 +1527,7 @@ import "../styles/global.css";
                                     </div>
                                 </div>
                                 <div class="col-md-3 mb-4">
-                                    <h5 class="text-white">Tautan Cepat</h5>
+                                <h3 class="h5 text-white">Tautan Cepat</h3>
                                     <ul class="list-unstyled">
                                         <li>
                                             <a
@@ -1525,7 +1574,7 @@ import "../styles/global.css";
                                     </ul>
                                 </div>
                                 <div class="col-md-4 mb-4">
-                                    <h5 class="text-white">Hubungi Kami</h5>
+                                <h3 class="h5 text-white">Hubungi Kami</h3>
                                     <p>
                                         <i
                                             class="fab fa-whatsapp me-2 text-primary-blue"
