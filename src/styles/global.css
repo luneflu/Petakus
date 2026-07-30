@@ -1057,7 +1057,7 @@ section[id] {
     position: absolute;
     inset: auto;
     bottom: 30px;
-    right: 30px;
+    left: 30px;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(8px);
     border-radius: 50px;
@@ -1073,9 +1073,9 @@ section[id] {
 }
 
 .sound-indicator .sound-badge {
-    position: fixed;
+    position: absolute;
     bottom: 30px;
-    right: 30px;
+    left: 30px;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(8px);
     border-radius: 50px;
@@ -1087,7 +1087,6 @@ section[id] {
     font-size: 0.85rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     pointer-events: none;
-    /* fixed positioning never causes layout shift */
 }
 
 /* ===== SECTION TITLE ===== */

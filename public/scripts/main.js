@@ -143,7 +143,7 @@ AOS.init({ duration: 800, once: true });
                 lbTitle.textContent = item.dataset.title;
                 lbDesc.textContent = item.dataset.desc;
             }
-            document.querySelectorAll('.galeri-item').forEach((item, idx) => {
+            document.querySelectorAll('.galeri-item').forEach((item) => {
                 item.addEventListener('click', () => {
                     visibleItems = Array.from(document.querySelectorAll('.galeri-item.visible'));
                     const visIdx = visibleItems.indexOf(item);
@@ -285,7 +285,7 @@ AOS.init({ duration: 800, once: true });
         }
 
         // Swiper untuk Our Partner (baru) - dengan autoplay dan loop
-        const ourPartnerSwiper = new Swiper('.ourpartner-swiper', {
+        new Swiper('.ourpartner-swiper', {
             slidesPerView: 2,
             spaceBetween: 20,
             loop: true,
