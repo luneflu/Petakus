@@ -6,19 +6,6 @@ AOS.init({ duration: 800, once: true });
         initGaleriFilter();
         initLightbox();
 
-        // ===== GOOGLE MAPS FACADE — loads iframe only on user click (saves 456 KiB JS) =====
-        function loadMap(facade) {
-            const iframe = document.createElement('iframe');
-            iframe.src = 'https://maps.google.com/maps?q=Mensana+Tower+Cibubur,+Jl.+Raya+Kranggan,+Jatisampurna&t=&z=15&ie=UTF8&iwloc=&output=embed';
-            iframe.className = 'rounded-3';
-            iframe.style.cssText = 'border:0;width:100%;height:100%;';
-            iframe.allowFullscreen = true;
-            iframe.title = 'Lokasi PT Pesona Lintang Kemukus';
-            facade.innerHTML = '';
-            facade.style.cursor = 'default';
-            facade.appendChild(iframe);
-        }
-
         function initHeroSwiper() {
             const dots = document.querySelectorAll('.hero-pagination .dot');
             const heroSwiper = new Swiper('.hero-swiper', {
