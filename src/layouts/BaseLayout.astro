@@ -53,21 +53,26 @@ import "../styles/global.css";
     </head>
 
     <body>
-        <div class="main-content visible" id="mainContent" style="opacity: 1;">
+        <div class="main-content" id="mainContent" style="opacity: 0;">
             <slot />
 
-            <!-- SCRIPTS -->
             <script>
                 import "bootstrap/dist/js/bootstrap.bundle.min.js";
                 import AOS from "aos";
                 import Swiper from "swiper/bundle";
 
-                // Expose AOS and Swiper to window so main.js can access them
                 window.AOS = AOS;
                 window.Swiper = Swiper;
 
-                // Import main.js to bundle it
                 import "../../public/scripts/main.js";
+
+                const reveal = () => {
+                    const el = document.getElementById("mainContent");
+                    if (el) el.style.opacity = "1";
+                };
+
+                if (document.readyState === "complete") reveal();
+                else window.addEventListener("load", reveal, { once: true });
             </script>
         </div>
     </body>
