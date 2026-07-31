@@ -96,7 +96,7 @@ section[id] {
 
 .btn-primary-blue {
     background-color: var(--primary-blue);
-    color: white;
+    color: white !important;
     border: none;
     font-weight: 600;
     padding: 10px 28px;
@@ -106,7 +106,7 @@ section[id] {
 
 .btn-primary-blue:hover {
     background-color: var(--primary-blue-dark);
-    color: white;
+    color: white !important;
     transform: translateY(-3px);
     box-shadow: 0 12px 20px -8px rgba(37, 99, 235, 0.3);
 }
@@ -155,7 +155,7 @@ section[id] {
     width: 64px;
     height: 64px;
     background: #25d366;
-    color: white;
+    color: white !important;
     border-radius: 50%;
     text-decoration: none;
     font-size: 32px;
@@ -197,7 +197,7 @@ section[id] {
 
 .whatsapp-float .wa-tooltip {
     background: #1e293b;
-    color: white;
+    color: white !important;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 13px;
@@ -778,7 +778,7 @@ section[id] {
     width: 100%;
     padding: 15px;
     background: var(--primary-blue);
-    color: white;
+    color: white !important;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     border-radius: 14px;
@@ -790,6 +790,7 @@ section[id] {
 
 .mobile-nav-footer .btn-cta:hover {
     background: #1d4ed8;
+    color: white !important;
     transform: translateY(-1px);
 }
 
