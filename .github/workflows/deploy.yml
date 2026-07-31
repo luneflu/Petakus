@@ -35,8 +35,8 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
-            mkdir -p /srv/Chalina
-            rm -rf /srv/Chalina/*
+            mkdir -p /srv/Petakus
+            rm -rf /srv/Petakus/*
 
       - name: Copy files to SSH
         uses: appleboy/scp-action@v1
@@ -45,5 +45,5 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           source: "dist/*"
-          target: "/srv/Chalina"
+          target: "/srv/Petakus"
           strip_components: 1
