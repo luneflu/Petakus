@@ -1,10 +1,4 @@
 ---
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/600.css";
-import "@fontsource/poppins/600.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/global.css";
-
 interface Props {
     title?: string;
 }
@@ -45,9 +39,19 @@ const {
 
         <link rel="icon" href="/image/logo.webp" type="image/webp" />
 
-        <!-- Defer non-critical CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" media="print" onload="this.media='all'" />
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" /></noscript>
+        <!-- Critical inline CSS: above-the-fold layout only -->
+        <style is:inline>
+            *{margin:0;padding:0;box-sizing:border-box}
+            html{overflow-x:hidden;scroll-behavior:smooth}
+            body{font-family:"Inter",sans-serif;background:#f8fafc;color:#1e293b;overflow-x:hidden;max-width:100vw}
+            .hero-swiper{overflow:hidden}
+            .hero-swiper .swiper-wrapper{display:flex;width:100%;height:100%}
+            .hero-swiper .swiper-slide{flex-shrink:0;width:100%;min-height:100vh}
+            .hero-section{position:relative;width:100%;min-height:100vh;overflow:hidden;background:#0a2540}
+            .hero-video-background{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.55}
+            .navbar{background:transparent!important;padding:20px 0;position:fixed;top:0;left:0!important;right:0!important;width:100%!important;z-index:1030}
+            .main-content{opacity:1}
+        </style>
     </head>
 
     <body>
@@ -56,15 +60,21 @@ const {
 
             <!-- SCRIPTS -->
             <script>
+                import "@fontsource/inter/300.css";
+                import "@fontsource/inter/400.css";
+                import "@fontsource/inter/500.css";
+                import "@fontsource/inter/600.css";
+                import "@fontsource/inter/700.css";
+                import "@fontsource/poppins/500.css";
+                import "@fontsource/poppins/600.css";
+                import "@fontsource/poppins/700.css";
+                import "bootstrap/dist/css/bootstrap.min.css";
+                import "aos/dist/aos.css";
+                import "swiper/swiper-bundle.css";
+                import "../styles/global.css";
                 import "bootstrap/dist/js/bootstrap.bundle.min.js";
                 import AOS from "aos";
                 import Swiper from "swiper/bundle";
-                import "swiper/swiper-bundle.css";
-                import "@fontsource/inter/300.css";
-                import "@fontsource/inter/500.css";
-                import "@fontsource/inter/700.css";
-                import "@fontsource/poppins/500.css";
-                import "@fontsource/poppins/700.css";
 
                 // Expose AOS and Swiper to window so main.js can access them
                 window.AOS = AOS;
