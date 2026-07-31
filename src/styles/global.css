@@ -50,10 +50,8 @@ h4,
     font-family: "Poppins", sans-serif;
 }
 
-/* font-display: swap for external fonts loaded via @font-face */
-@font-face {
-    font-display: swap;
-}
+/* font-display: swap for all fonts */
+@font-face { font-display: swap; }
 
 section[id] {
     scroll-margin-top: 50px;
@@ -78,7 +76,16 @@ section[id] {
 }
 
 .text-secondary {
-    color: #475569 !important;
+    color: #64748b !important;
+}
+
+/* Footer links need higher contrast on dark bg */
+.footer .text-secondary {
+    color: #94a3b8 !important;
+}
+
+.footer .text-primary-blue {
+    color: #93c5fd !important;
 }
 
 /* ===== UTILITIES ===== */
@@ -1041,16 +1048,15 @@ section[id] {
     background: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+    will-change: transform;
 }
 
 .hero-pagination .dot.active {
     background: var(--primary-blue);
-    width: 30px;
+    transform: scaleX(2.5);
     border-radius: 10px;
-    transition:
-        width 0.3s,
-        background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 .sound-indicator {

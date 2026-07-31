@@ -1,15 +1,8 @@
 ---
-import "@fontsource/inter/300.css";
 import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
-import "@fontsource/inter/700.css";
-import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/600.css";
-import "@fontsource/poppins/700.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "aos/dist/aos.css";
-import "swiper/swiper-bundle.css";
 import "../styles/global.css";
 
 interface Props {
@@ -51,6 +44,10 @@ const {
         <title>{title}</title>
 
         <link rel="icon" href="/image/logo.webp" type="image/webp" />
+
+        <!-- Defer non-critical CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css" /></noscript>
     </head>
 
     <body>
@@ -62,6 +59,12 @@ const {
                 import "bootstrap/dist/js/bootstrap.bundle.min.js";
                 import AOS from "aos";
                 import Swiper from "swiper/bundle";
+                import "swiper/swiper-bundle.css";
+                import "@fontsource/inter/300.css";
+                import "@fontsource/inter/500.css";
+                import "@fontsource/inter/700.css";
+                import "@fontsource/poppins/500.css";
+                import "@fontsource/poppins/700.css";
 
                 // Expose AOS and Swiper to window so main.js can access them
                 window.AOS = AOS;
