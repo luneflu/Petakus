@@ -2,23 +2,48 @@ name: Deploy to SSH
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: SSH, Pull, and Build
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: latest
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build with Astro
+        run: pnpm run build
+
+      - name: Clean previous files
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
-          # port: ${{ secrets.VPS_PORT }} # Uncomment if not using port 22
           script: |
-            cd /srv/Petakus
-            git reset --hard
-            git pull origin main
-            pnpm run build
+            mkdir -p /srv/Chalina
+            rm -rf /srv/Chalina/*
+
+      - name: Copy files to SSH
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          source: "dist/*"
+          target: "/srv/Chalina"
+          strip_components: 1
